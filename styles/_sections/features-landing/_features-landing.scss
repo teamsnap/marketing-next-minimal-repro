@@ -1,0 +1,159 @@
+.features_summary {
+	a {
+		position: relative;
+		padding-left: 55px;
+		vertical-align: middle;
+		font-size: .85em;
+		font-family: $museo-300;
+		font-weight: 600;
+		line-height: 80px;
+		color: $brand-primary;
+		
+		&:hover {
+			text-decoration: none;
+			color: $brand-primary-dark;
+		}
+		&:after {
+			content: '';
+			clear: both;
+		}
+	}
+
+	.ss-icon {
+		position: absolute;
+		left: 0;
+		font-size: $mod-font-size-8;
+		color: $brand-primary;
+		stroke: $brand-primary;
+		transition: color .25s ease-in-out;
+
+		&:hover {
+			color: $brand-primary-dark;
+			stroke: $brand-primary-dark;
+		}
+	}
+
+	.icon--tournaments {
+		stroke: none;
+		font-size: 3.4em;
+
+		&:hover {
+			color: none;
+			stroke: none;
+		}
+	}
+
+	.icon--officials {
+		stroke: none;
+
+		&:hover {
+			stroke: none;
+		}
+	}
+
+	p {
+		font-size: $mod-font-size--1;
+		margin-top: -25px;
+		padding-left: 55px;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+
+    .cl-features-tournaments {
+        width: 24%;
+    }
+
+    .cl-features-officials {
+        width: 44%;
+    }
+}
+
+.features li a .tsl-icon, .features a .tsl-icon {
+	position: absolute;
+	left: 0;
+	top: 5px;
+	width: 50px;
+	height: 50px;
+	display: block;
+	background: url('#{$img-path}TSL-icon.png') no-repeat 0 0;
+}
+
+.features {
+	li,
+	& {
+		font-size: $mod-font-size-1;
+		font-weight: 500;
+		height: 75px;
+		padding-top: 10px;
+		display: table;
+		a {
+			position: relative;
+			padding-left: 55px;
+			display: table-cell;
+			vertical-align: middle;
+			font-size: .85em;
+			font-weight: 600;
+			font-family: $museo-300;
+			line-height: 20px;
+			color: $brand-primary;
+			.ss-icon {
+				position: absolute;
+				left: 0;
+				top: 5px;
+				font-size: $mod-font-size-8;
+				color: $brand-primary;
+				stroke: $brand-primary;
+				transition: color .25s ease-in-out;
+			}
+			
+			&:hover {
+				text-decoration: none;
+				color: $brand-primary-dark;
+				.ss-icon {
+					color: $brand-primary-dark;
+					stroke: $brand-primary-dark;
+				}
+
+				svg {
+					fill: $brand-primary;
+				}
+			}
+		}
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+
+	.cl-features-sidebar-tournaments,
+    .cl-features-sidebar-officials {
+	    position: absolute;
+	    left: 0;
+	    top: 2px;
+	    font-size: 42px;
+
+		svg {
+			transition: fill .25s ease-in-out;
+		}
+	}
+}
+
+@include responsive(screen-sm) {
+
+	.features_summary {
+		a {
+			padding-left: 75px;
+			font-size: $mod-font-size-1;
+			line-height: 80px;
+			.ss-icon {
+				line-height: 68px;
+				font-size: $mod-font-size-10;
+			}
+		}
+		p {
+			padding-left: 75px;
+		}
+	}
+
+}

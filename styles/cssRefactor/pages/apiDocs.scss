@@ -1,0 +1,231 @@
+.Docs--content {
+  h1 {
+    font-size: $mod-font-size-10;
+  }
+
+  p {
+    font-size: $mod-font-size-2;
+  }
+}
+
+.Docs--contentContainer {
+  h3 {
+    color: black;
+  }
+}
+
+.Docs--link {
+  h5,
+  h3 {
+    color: $ts-blue;
+
+    > span {
+      border-bottom: 2px solid transparent;
+      transition: border 200ms ease;
+
+      &:hover {
+        border-bottom-color: $ts-blue;
+      }
+    }
+  }
+
+  p {
+    color: $gray-dark;
+  }
+}
+
+.Docs--nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  flex-wrap: wrap;
+
+  li {
+    padding-bottom: 0px;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}
+
+.Docs--toc {
+  border: 1px solid lighten($ts-grey, 10%);
+  border-radius: 8px;
+
+  a {
+    transition: border 200ms ease;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-color: $ts-blue;
+    }
+  }
+
+  > li {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  li:first-child {
+    > a {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+  }
+
+  > li > a {
+    background-color: lighten($ts-grey, 10%);
+    display: block;
+    padding: 6px 12px;
+    font-weight: bold;
+  }
+}
+
+#page ul li .Docs--tocChildren {
+  padding-left: 0px !important;
+}
+
+.Docs--tocChildren {
+  font-size: 14px;
+
+  li {
+    list-style-type: none !important;
+    border-bottom: 1px solid lighten($ts-grey, 10%);
+    padding: 4px 0px;
+
+    a {
+      margin-left: 30px;
+    }
+  }
+}
+
+.Docs--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1000px;
+  margin: 0 auto;
+  color: white;
+  height: 30px;
+  width: 30px;
+  &.Docs--icon__success {
+    background-color: $ts-green;
+  }
+
+  &.Docs--icon__failure {
+    background-color: $ts-red;
+  }
+}
+
+.Docs--homepage {
+  position: relative;
+  background-color: rgba(35, 106, 172, 0.75);
+  overflow: hidden;
+
+  @media (min-width: $screen-md-min) {
+    min-height: 300px;
+  }
+
+  h1,
+  h2 {
+    color: white;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-family: $open-sans;
+  }
+
+  .image-bg {
+    background-image: url('/images/nhl_thing-53f5066e.jpg');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    z-index: -1;
+    bottom: 0px;
+    padding: 0px;
+    position: absolute;
+    filter: blur(20px);
+  }
+
+  .polaroid {
+    border: 1px solid #e3e3e3;
+    backface-visibility: hidden;
+
+    img {
+      border: 10px solid #f6f6f6;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+      backface-visibility: hidden;
+      height: 250px;
+    }
+  }
+
+  .polaroid-rotate-1 {
+    position: absolute;
+    display: block;
+    transform: rotate(6deg);
+  }
+
+  .polaroid-rotate-2 {
+    position: absolute;
+    display: block;
+    transform: rotate(14deg);
+  }
+}
+
+.Docs--BlogBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .blog-author {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    img {
+      max-width: 30px;
+      align-self: center;
+      border-radius: 300px;
+      margin-right: 10px;
+    }
+  }
+
+  .blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 0px;
+    margin-top: 4px;
+
+    li {
+      margin-right: 4px;
+      padding-bottom: 0px;
+
+      a {
+        font-size: 12px;
+        border-radius: 4px;
+        background-color: $ts-grey;
+        padding: 2px 4px;
+      }
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    .blog-author,
+    .blog-tags {
+      width: 50%;
+    }
+
+    .blog-tags {
+      justify-content: flex-end;
+      margin-top: 0px;
+    }
+  }
+}

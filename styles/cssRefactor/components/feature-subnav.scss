@@ -1,0 +1,126 @@
+.feature__subnav {
+  .container-fluid {
+    max-width: 1170px;
+  }
+
+  .container-fluid--wide {
+    max-width: 1170px;
+  }
+}
+
+.feature__subnav-blue {
+  background-color: $cl-light-blue;
+}
+
+.feature__subnav-flex {
+  display: flex;
+  padding-bottom: 10px;
+  border-bottom: 1px solid darken($cl-light-blue, 5%);
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  @media (max-width: $screen-md-min) {
+    align-items: flex-start;
+
+    > nav {
+      width: 100%;
+    }
+  }
+}
+
+.feature__subnav-heading {
+  margin-right: 30px;
+  padding-bottom: 8px;
+}
+
+.feature__subnav-logo {
+  margin-left: auto;
+  max-width: 150px;
+  margin-bottom: 10px;
+
+  // @media (max-width: $screen-md-min) {
+  //   display: none;
+  // }
+}
+
+.feature__subnav-toggle {
+  margin-left: auto;
+}
+
+.feature__subnav-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: center;
+  margin: 0px;
+
+  @media (max-width: $screen-md-min) {
+    flex-direction: column-reverse;
+    height: auto;
+    overflow: auto;
+    width: 100%;
+    opacity: 1;
+    justify-content: flex-end;
+    transition: all 100ms ease-in;
+  }
+}
+
+//TODO change to modifier move to different section?
+.feature-subnav-list.isOpen {
+  @media (max-width: $screen-md-min) {
+    height: 355px;
+    opacity: 1;
+  }
+}
+
+.feature__subnav-item {
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  font-size: $mod-font-size--2;
+  padding: 10px;
+  border-radius: 4px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.feature__subnav-item--active {
+  background-color: darken($cl-light-blue, 2%);
+  font-weight: bold;
+}
+
+#more {
+  z-index: 1;
+  width: 200px;
+  background-color: $ts-blue;
+  border: none;
+  position: relative;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+
+  @media (max-width: $screen-md-min) {
+    width: 100%;
+  }
+
+  #overflow {
+    display: none;
+    margin-left: 0px;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 5px 10px 0 rgba(78, 109, 132, 0.06);
+  }
+
+  &:focus-within,
+  &:hover,
+  &:focus {
+    #overflow {
+      display: block;
+    }
+  }
+}

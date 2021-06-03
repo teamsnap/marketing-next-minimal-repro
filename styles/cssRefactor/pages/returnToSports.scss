@@ -1,0 +1,619 @@
+.ReturnToSports--SocialImpact {
+  margin-top: 50px;
+
+  @media (min-width: $screen-md-min) {
+    padding-top: 150px;
+  }
+}
+
+.ReturnToSports--Callout {
+
+  &.ReturnToSports--Brands {
+
+    .container {
+      background-image: url('/images/callout-bg-image.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      h3,
+      p {
+        color: white;
+      }
+    }
+
+    img {
+      margin-bottom: -2%;
+
+      @media (min-width: $screen-md-min) {
+        margin-bottom: -2.5%;
+      }
+    }
+  }
+
+  &.ReturnToSports--HealthCheck {
+    
+    .container {
+      background-image: url('/images/callout-bg-health-check.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      h3,
+      p {
+        color: white;
+      }
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .container {
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }  
+}
+
+.ReturnToSports--CalloutMargin {
+  margin-top: -100px;
+
+  @media (min-width: $screen-md-min) {
+    margin-top: -200px;
+  }
+}
+
+.ReturnToSports--canvasAnswers {
+  list-style-type: none;
+
+  li {
+    display: flex;
+    align-items: center;
+    opacity: 0.45;
+
+    &.active {
+      opacity: 1;
+
+      span {
+        background-color: $ts-blue;
+        box-shadow: 0px 11px 20px #86868629;
+      }
+    }
+  }
+
+  span {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 300px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.ReturnToSports--EmojiLoveList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-evenly;
+  align-items: center;
+
+  li {
+    @media (max-width: $screen-md-min) {
+      width: 100%;
+    }
+  }
+
+  button {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+
+    @media (max-width: $screen-md-min) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  span {
+    background-color: white;
+    box-shadow: 0px 11px 20px #86868629;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 166px;
+    height: 166px;
+    border-radius: 300px;
+    margin-bottom: 20px;
+    transition: all 200ms ease-in;
+
+    @media (max-width: $screen-md-min) {
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+      margin-bottom: 0px;
+    }
+  }
+
+  li {
+
+    &:hover {
+
+      span {
+        background-color: lighten($ts-blue, 10%);
+        transform: scale(0.95);
+        box-shadow: 0px 0px 20px #86868629;
+      }
+    }
+
+    &.active {
+
+      span {
+        background-color: $ts-blue;
+        transform: scale(0.95);
+        box-shadow: 0px 0px 20px #86868629;
+      }
+    }
+  }
+}
+
+.ReturnToSports--SwiperVideo {
+
+  .swiper-slide {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.ReturnToSports--SwiperContainer {
+
+  .swiper-slide {
+    padding: 15px;
+  }
+
+  .swiper-button-next {
+    right: 50px;
+
+    &:after {
+      padding-left: 5px;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 50px;
+
+    &:after {
+      padding-right: 5px;
+    }
+  }
+
+  @media (max-width: $screen-md-min) {
+    .swiper-button-next {
+      right: 10px;
+    }
+
+    .swiper-button-prev {
+      left: 10px;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 44px;
+    height: 44px;
+    border-radius: 300px;
+    background-color: #FF5A00;
+    transition: all 150ms ease;
+
+    &:hover {
+      transform: scale(0.85)
+    }
+
+    &:after {
+      font-size: 20px;
+      color: white;
+    }
+  }
+}
+
+.ReturnToSports--SwiperContainer {
+
+  h4 {
+    font-size: 18px;
+  }
+}
+
+.ReturnToSports--ContentImage {
+
+  img {
+    border-radius: 8px;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.ReturnToSports--RowCenter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ReturnToSports--ImpactContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  > div {
+    width: 100%;
+    max-width: 100%;
+  }
+
+   @media (min-width: $screen-md-min) {
+      > div {
+        width: 50%;
+        max-width: 50%;
+      }
+   }
+}
+
+.ReturnToSports--Research {
+  background-image: url('/images/research-study-background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 476px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .container {
+    max-width: 600px;
+  }
+}
+
+.ReturnToSports--whole--container {
+  color: white;
+}
+
+.ReturnToSports--header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #D05800;
+  background-image:linear-gradient(#D05800,#14406A, #050717);
+  padding-top: 90px;
+  padding-bottom: 60px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: $screen-md-min) {
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: $screen-md-min) {
+    padding-top: 160px;
+    padding-bottom: 100px;
+  }
+}
+
+.ReturnToSports--swash1 {
+  position: absolute;
+  opacity: 0.5;
+}
+
+.ReturnToSports--swash2 {
+  position: absolute;
+  opacity: 0.5;
+  bottom: 100px;
+  z-index: 0;
+}
+
+.ReturnToSports--swash3 {
+  position: absolute;
+  opacity: 0.5;
+  top: 100px;
+  z-index: 0;
+}
+
+.ReturnToSports--swash4 {
+  position: absolute;
+  left: 0px;
+  top: 100px;
+  z-index: -1;
+}
+
+.ReturnToSports--header--smallText {
+  display: flex;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-style: oblique;
+  align-items: center;
+  justify-content: center;
+
+  &:before {
+    margin-right: 20px;
+  }
+
+  &:after {
+    margin-left: 20px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    background-color: rgba(255,255,255,0.6);
+    height: 2px;
+    width: 10%;
+    padding: 0px 20px;
+  }
+}
+
+.ReturnToSports--header--bigText {
+  font-size: 6.5rem;
+  margin: 0px;
+  line-height: 120px;
+  font-style: oblique;
+  font-weight: 900;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 13rem;
+    line-height: 200px;
+  }
+}
+
+.ReturnToSports--header--innerTextContent {
+  max-width: 723px;
+  z-index: 10;
+}
+
+.ReturnToSports--header--title-tag {
+  font-size: 20px;
+  color:white;
+  text-align: center;
+  z-index: 10;
+}
+
+.ReturnToSports--videoSection {
+  background-color: #050715;
+  position: relative;
+}
+
+.ReturnToSports--videoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ReturnToSports--videoContainer--text,
+.ReturnToSports--videoContainer-activeVideo {
+  width: 100%;
+  max-width: 100%;
+
+  @media (min-width: $screen-md-min) {
+    max-width: 50%;
+  }
+}
+
+.ReturnToSports--videoContainer--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: $screen-md-min) {
+    padding-left: 45px;
+  }
+}
+
+.ReturnToSports--videoContainer--bigText {
+  font-size: 25px;
+}
+
+.ReturnToSports--SwiperContainer--additionalStyle {
+  background-color: #050715;
+  z-index: 10;
+
+  @media (min-width: $screen-sm-min) {
+    padding-bottom: 200px;
+  }
+}
+
+.ReturnToSports--graphCenter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.ReturnToSports--swashWrapper {
+  overflow: hidden;
+  position: relative;
+
+  .container {
+    z-index: 20;
+  }
+}
+
+.ReturnToSports--MapContainer {
+    background-color: #050715;
+    width:100%;
+    color: white;
+    padding: 0px 30px 200px 280px;
+}
+
+.ReturnToSports--MapContainer--LargeText {
+  font-size: 35px;
+}
+
+.ReturnToSports--MapContainer--smallText {
+  font-size: 20px;
+}
+
+.ReturnToSports--MapContainer--mapsBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ReturnToSports--MapContainer--activeMap {
+  background-color: #14406A;
+  height: 500px;
+  width:500px;
+}
+
+.ReturnToSports--MapContainer--mapSelectContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: orange;
+  height: 150px;
+  width:150px;
+  margin-right:600px;
+}
+
+#my-player {
+  height: 252px;
+  margin: 0px auto 30px auto;
+  z-index: 10;
+}
+
+#my-player .vjs-big-play-button {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 60px;
+  border: none;
+  top: 50%;
+  left: 50%;
+  margin-top: -35px;
+  margin-left: -35px;
+}
+
+.ReturnToSports--absoluteContainer {
+  position: relative;
+
+  &:hover {
+
+    .ReturnToSports--muteButton {
+      background-color: rgba(255,255,255,0.8);
+    }
+  }
+}
+
+.ReturnToSports--muteButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255,255,255,0.4);
+  border: none;
+  box-shadow: 0px 0px 20px #86868629;
+  color: $ts-darkblue;
+  width: 40px;
+  height: 40px;
+  border-radius: 300px;
+  overflow: hidden;
+  transition: all 0.4s;
+  z-index: 20;
+}
+
+.ReturnToSports--VideoSlide {
+  background: none;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:after {
+    font-family: VideoJS;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 30px;
+    position: absolute;
+    content: "\f101";
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(43, 51, 63, 0.7);
+    border-radius: 0.3em;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+
+    &:after {
+      background-color: rgba(115, 133, 159, 0.5);
+    }
+
+    &:before {
+      opacity: 0;
+    }
+  }
+
+  &:before {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    content: '';
+    position: absolute;
+    transition: all 0.4s;
+  }
+
+  img {
+    border-radius: 8px;
+    width: 327px;
+    height: 227px;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.Covid--flex-container li {
+  margin-left: 15px;
+  margin-right: 15px;
+  line-height: 2rem;
+  font-weight: bold;
+  font-family: $museo-slab;
+
+  a {
+    border-bottom-color: lighten($gray, 35%);
+  }
+
+  span {
+    color: $gray;
+    font-weight: normal;
+    font-family: $open-sans;
+  }
+}
+
+.Covid--flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.Covid--flex-list li {
+   width: 100%;
+
+  @media (min-width: $screen-md-min) {
+    width: calc(50% - 45px);
+  }
+}

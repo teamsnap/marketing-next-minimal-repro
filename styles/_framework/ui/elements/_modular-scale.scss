@@ -1,0 +1,252 @@
+//----------------------------------//
+//     Table of Contents
+//      see tools/mixins/responsive-text
+//      for mixin
+//      variables are in the
+//      _variablee file
+//
+//      1. Modular Scale 14 Styles
+//      2. Modular Scale 13 Styles
+//      3. Modular Scale 12 Styles
+//      4. Modular Scale 11 Styles
+//      5. Modular Scale 10 Styles
+//      6. Modular Scale 9 Styles
+//      7. Modular Scale 8 Styles
+//      8. Modular Scale 7 Styles
+//      9. Modular Scale 6 Styles
+//      10. Modular Scale 5 Styles
+//      11. Modular Scale 4 Styles
+//      12. Modular Scale 3 Styles
+//      13. Modular Scale 2 Styles
+//      14. Modular Scale 1 Styles
+//      15. Modular Scale Base Styles
+//      16. Modular Scale -1 Styles
+//      17. Modular Scale -2 Styles
+//      18. Modular Scale -3 Styles
+//      19. Modifiers
+// --------------------------------//
+
+//----------------------------------//
+//     1. Modular Scale 14 Styles
+// --------------------------------//
+.ms--14,
+[class*="ms--14"],
+[class^="ms--14"] {
+    @include responsive-text($mod-font-size-14);
+}
+
+//----------------------------------//
+//     2. Modular Scale 13 Styles
+// --------------------------------//
+.ms--13,
+[class*="ms--13"],
+[class^="ms--13"] {
+    @include responsive-text($mod-font-size-13);
+}
+
+//----------------------------------//
+//     3. Modular Scale 12 Styles
+// --------------------------------//
+.ms--12,
+[class*="ms--12"],
+[class^="ms--12"] {
+    @include responsive-text($mod-font-size-12);
+}
+
+//----------------------------------//
+//     4. Modular Scale 11 Styles
+// --------------------------------//
+.ms--11,
+[class*="ms--11"],
+[class^="ms--11"] {
+    @include responsive-text($mod-font-size-11);
+}
+
+//----------------------------------//
+//     5. Modular Scale 10 Styles
+// --------------------------------//
+.ms--10,
+[class*="ms--10"],
+[class^="ms--10"] {
+    @include responsive-text($mod-font-size-10);
+}
+
+//----------------------------------//
+//     6. Modular Scale 9 Styles
+// --------------------------------//
+.ms--9,
+[class*="ms--9"],
+[class^="ms--9"] {
+    @include responsive-text($mod-font-size-9);
+}
+
+//----------------------------------//
+//     7. Modular Scale 8 Styles
+// --------------------------------//
+.ms--8,
+[class*="ms--8"],
+[class^="ms--8"] {
+    @include responsive-text($mod-font-size-8);
+}
+
+//----------------------------------//
+//     8. Modular Scale 7 Styles
+// --------------------------------//
+.ms--7,
+[class*="ms--7"],
+[class^="ms--7"] {
+    @include responsive-text($mod-font-size-7);
+}
+
+//----------------------------------//
+//     9. Modular Scale 6 Styles
+// --------------------------------//
+.ms--6,
+[class*="ms--6"],
+[class^="ms--6"] {
+    @include responsive-text($mod-font-size-6);
+}
+
+//----------------------------------//
+//     10. Modular Scale 5 Styles
+// --------------------------------//
+.ms--5,
+[class*="ms--5"],
+[class^="ms--5"] {
+    @include responsive-text($mod-font-size-5);
+}
+
+//----------------------------------//
+//     11. Modular Scale 4 Styles
+// --------------------------------//
+.ms--4,
+[class*="ms--4"],
+[class^="ms--4"] {
+    @include responsive-text($mod-font-size-4);
+}
+
+//----------------------------------//
+//     12. Modular Scale 3 Styles
+// --------------------------------//
+.ms--3,
+[class*="ms--3"],
+[class^="ms--3"] {
+    @include responsive-text($mod-font-size-3);
+}
+
+//----------------------------------//
+//     13. Modular Scale 2 Styles
+// --------------------------------//
+.ms--2,
+[class*="ms--2"],
+[class^="ms--2"] {
+    @include responsive-text($mod-font-size-2);
+}
+
+//----------------------------------//
+//     14. Modular Scale 1 Styles
+// --------------------------------//
+// needs underscore on base number
+// to stop namespace issues in the teens
+.ms--_1,
+[class*="ms--_1"],
+.ms--_1 {
+    @include responsive-text($mod-font-size-1);
+}
+
+//----------------------------------//
+//     15. Modular Scale Base Styles
+// --------------------------------//
+.ms--base,
+[class*="ms--base"],
+[class^="ms--base"] {
+    @include responsive-text($mod-font-size-base);
+    // reset to font size for all screen sizes
+    font-size: $mod-font-size-base;
+}
+
+//----------------------------------//
+//     16. Modular Scale -1 Styles
+// --------------------------------//
+.ms---1,
+[class*="ms---1"],
+[class^="ms---1"] {
+    @include responsive-text($mod-font-size--1);
+}
+
+//----------------------------------//
+//     17. Modular Scale -2 Styles
+// --------------------------------//
+.ms---2,
+[class*="ms---2"],
+[class^="ms---2"] {
+    @include responsive-text($mod-font-size--2);
+}
+
+//----------------------------------//
+//     18. Modular Scale -3 Styles
+// --------------------------------//
+.ms---3,
+[class*="ms---3"],
+[class^="ms---3"] {
+    @include responsive-text($mod-font-size--3);
+}
+
+//----------------------------------//
+//     19. Modifiers
+// --------------------------------//
+
+.ms--14,
+.ms--13,
+.ms--12,
+.ms--11,
+.ms--10,
+.ms--9,
+.ms--8,
+.ms--7,
+.ms--6,
+.ms--5,
+.ms--4,
+.ms--3,
+.ms--2,
+.ms--_1,
+.ms--base,
+.ms---1,
+.ms---2,
+.ms---3,
+.ms {
+
+    &.thin {
+		font-family: $museo-300;
+	}
+
+    &.bold {
+        font-weight: bold;
+    }
+
+	&.italic {
+        font-style: italic;
+    }
+
+    &__sans {
+        font-family: $font-family-sans-serif;
+
+        &.bold {
+            font-family: $font-family-sans-serif;
+            font-weight: bold;
+        }
+
+        &.italic {
+            font-family: $font-family-sans-serif;
+            font-style: italic;
+        }
+    }
+
+    &__slab {
+        font-family: $museo-slab;
+
+        &.bold {
+            font-weight: 900;
+        }
+    }
+}

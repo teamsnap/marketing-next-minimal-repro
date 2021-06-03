@@ -1,0 +1,22 @@
+#sports-page-dark {
+	.header {
+		font-size: $mod-font-size-9 !important;
+		line-height: 56px !important;
+		font-family: $museo-700;
+		text-shadow: 0 3px 0 #333;
+		margin-bottom: 20px;
+	}
+	.sub-head {
+		font-size: $mod-font-size-7 !important;
+		line-height: 46px !important;
+		font-family: $museo-700;
+		text-shadow: 0 2px 0 #333;
+		margin-bottom: 20px;
+	}
+	.head-content {
+		font-size: $mod-font-size-2 !important;
+		line-height: 32px !important;
+		font-family: $museo-700;
+		text-shadow: 0 2px 0 #333;
+	}
+}

@@ -1,0 +1,11 @@
+svg {
+    stroke: $text-color;
+}
+
+.icon--officials {
+    stroke: none;
+
+    &:hover {
+        stroke: none;
+    }
+}

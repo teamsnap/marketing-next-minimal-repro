@@ -1,0 +1,282 @@
+.CTA__form--center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: $screen-md-min) {
+    flex-wrap: wrap;
+    .col-md-8 {
+      order: 1;
+    }
+
+    .col-md-4 {
+      order: 2;
+    }
+  }
+}
+
+.CTA__form-section {
+  background-color: $ts-blue;
+
+  &.light {
+    background-color: #eef7ff;
+  }
+}
+
+.CTA__form {
+  max-width: 310px;
+  margin: 40px auto 0 auto;
+  overflow: hidden;
+  border: none;
+
+  .Popup-container {
+    margin-left: 20px;
+  }
+
+  .CTA__form-panel {
+    transition: 100ms ease-in;
+  }
+
+  .StepNav {
+    padding-bottom: 0;
+    width: 100%;
+  }
+
+  .StepNav-steps {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    justify-content: space-between;
+  }
+
+  .CTA__form-panel-main-heading {
+    color: $text-color;
+  }
+
+  .CTA__form-panel-intro {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .CTA__form-panel-intro-heading {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    color: $ts-blue;
+    font-family: $museo-700;
+    font-size: $mod-font-size-base;
+    transition: all 150ms ease;
+  }
+
+  .CTA__form-panel-intro-desc {
+    font-size: 14px;
+    color: $text-color;
+    margin-bottom: 0;
+    transition: all 150ms ease;
+  }
+
+  .CTA__form-panel-intro-inner {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.1);
+    height: calc(100% - 16px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 100ms ease;
+
+    svg {
+      width: 12px;
+    }
+
+    .CTA__form-panel-intro-icon {
+      font-size: 26px;
+      color: $ts-blue;
+      stroke: $ts-blue;
+      width: 26px;
+      transition: all 150ms ease;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.1);
+      transform: translateY(5px);
+      background-color: $ts-blue;
+
+      h5,
+      p {
+        color: white;
+      }
+
+      svg {
+        stroke: white;
+      }
+    }
+  }
+
+  .StepNav-step {
+    &:before {
+      // we have a conflict with our list styles
+      // excuse the important while that gets fixed later on
+      display: block !important;
+    }
+
+    &:nth-child(2) {
+      padding-left: 34px;
+
+      &:before {
+        width: calc(100% - 89px);
+      }
+    }
+
+    &.is-enabled {
+      .StepNav-stepIcon {
+        background-color: $ts-blue;
+        border-color: $ts-grey;
+        color: white;
+      }
+    }
+
+    &.is-active {
+      .StepNav-stepIcon {
+        background-color: white;
+        border-color: $ts-blue;
+        color: $ts-blue;
+      }
+    }
+
+    .StepNav-stepIcon {
+      padding-left: 9px;
+    }
+  }
+
+  &.is-active {
+    .StepNav-stepIcon {
+      background-color: white;
+      border-color: $ts-blue;
+      color: $ts-blue;
+    }
+  }
+
+  .StepNav-stepIcon {
+    padding-left: 9px;
+  }
+}
+
+.CTA__form-panel {
+  flex-wrap: wrap;
+  align-content: start;
+  flex-direction: column;
+}
+
+#CTA__form-panel-row--first {
+  margin-bottom: 0px;
+  height: 100%;
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .col-md-12,
+  button {
+    height: 100%;
+  }
+
+  button.CTA__form-panel-intro {
+    height: auto;
+  }
+}
+
+.Panel-row {
+  width: 100%;
+  border-width: 0;
+  margin-bottom: auto;
+  border-bottom: none !important;
+}
+
+.Panel-header {
+  width: 100%;
+
+  button {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.Panel-footer {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .Icon--link {
+    font-size: 12px;
+    border-bottom: 2px solid $ts-blue;
+  }
+
+  &.CTA__form-submit {
+    display: flex;
+
+    .Button {
+      &:not(.Button--primary) {
+        display: none;
+      }
+    }
+  }
+}
+
+.Popup-container {
+  .list {
+    padding: 10px;
+    font-size: 14px;
+    max-height: 240px;
+    overflow: scroll;
+    margin-bottom: 0;
+
+    li {
+      list-style-type: none;
+      color: $ts-blue;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.Popup.Popup--cta {
+  .Popup-container {
+    width: 360px;
+  }
+
+  .Popup-content {
+    padding: 10px;
+  }
+
+  .ButtonGroup {
+    .Button {
+      flex: 1;
+      height: auto;
+      white-space: normal;
+      line-height: 22px;
+      padding: 12px 24px;
+      text-align: center;
+    }
+  }
+}
+
+@include responsive(screen-xs) {
+  .CTA__form {
+    max-width: 310px;
+
+    .CTA__form-panel-intro-heading {
+      font-size: 17px;
+    }
+  }
+}

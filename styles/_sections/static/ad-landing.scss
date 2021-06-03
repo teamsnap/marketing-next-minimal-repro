@@ -1,0 +1,64 @@
+.ad-landing {
+	.header-logo {
+		text-align: center;
+	}
+
+	.form-trial {}
+
+	.form-container {
+		background: #f1f1f1;
+		padding: 10px;
+		border-radius: 4px;
+	}
+
+	.sideNote {
+		color: #8f8f8f;
+	}
+
+	.section-1 {
+		.section-1__header1,
+		.section-1__header3 {
+			color: $brand-primary !important;
+		}
+
+		.section-1__header3 {
+			padding-bottom: 20px !important;
+		}
+
+		.section-1__ratings-header {
+			text-align: center !important;
+		}
+
+		.section-1__img {
+			width: 90%;
+		}
+
+		.section-1__ratings-img {
+			width: 240px;
+		}
+
+		.section-1__ratings-text {
+			display: inline-block;
+			color: #6f6f6f;
+			padding-top: 16px;
+			font-size: 20px;
+		}
+
+		.section-1__stars-right {
+			text-align: right;
+			@media only screen and (max-width: 500px) {
+				text-align: left;
+			}
+		}
+	}
+
+	.section-2 {
+		background-color: $brand-primary;
+		padding: 60px;
+
+		.section-21__header3 {
+			color: white !important;
+			margin-bottom: 45px;
+		}
+	}
+}

@@ -1,0 +1,133 @@
+//
+// Component animations
+// --------------------------------------------------
+
+// Heads up!
+//
+// We don't use the `.opacity()` mixin here since it causes a bug with text
+// fields in IE7-8. Source: https://github.com/twbs/bootstrap/pull/3552.
+
+.fade {
+	opacity: 0;
+	@include transition(opacity .15s linear);
+	&.in {
+		opacity: 1;
+	}
+}
+
+.collapse {
+	display: none;
+
+	&.in {
+		display: block;
+	}
+	// [converter] extracted tr&.in to tr.collapse.in
+	// [converter] extracted tbody&.in to tbody.collapse.in
+}
+
+tr.collapse.in {
+	display: table-row;
+}
+
+tbody.collapse.in {
+	display: table-row-group;
+}
+
+.collapsing {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	@include transition(height .35s ease);
+}
+
+// setting up all animations
+.animate-in,
+.animate-up {
+	opacity: 0;
+}
+
+// degradation for all animations
+.animate-in.shown,
+.no-js .animate-in,
+.no-cssanimations .animate-in,
+.animate-up.shown,
+.no-js .animate-up,
+.no-cssanimations .animate-up {
+	opacity: 1;
+}
+
+// animate-in
+.animate-in {
+	&.animate {
+		-webkit-animation: fadeIn 1s ease forwards;
+		animation: fadeIn 0.65s ease forwards;
+		-webkit-transform: scale(0.6);
+		transform: scale(0.6);
+		-webkit-animation: scaleUp 0.65s ease-in-out forwards;
+		animation: scaleUp 0.65s ease-in-out forwards;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes scaleUp {
+	0% {
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes scaleUp {
+	0% {
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+// animate-up
+.animate-up {
+	&.animate {
+		-webkit-transform: translateY(200px);
+		transform: translateY(200px);
+		-webkit-animation: moveUp 0.65s ease forwards;
+		animation: moveUp 0.65s ease forwards;
+	}
+}
+
+@-webkit-keyframes moveUp {
+	0% {
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes moveUp {
+	0% {
+	}
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

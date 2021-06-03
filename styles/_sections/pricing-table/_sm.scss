@@ -1,0 +1,54 @@
+@include responsive(screen-sm) {
+
+	#Pricing {
+		.table-body {
+			padding-left: 50px;
+			padding-right: 50px;
+			.feature {
+				display: block;
+				font-size: $mod-font-size--2;
+			}
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+			& > ul {
+				width: 48%;
+				float: left;
+				&:nth-child(2n+1) {
+					margin-right: 4%;
+				}
+			}
+			.xs-hidden {
+				display: block;
+			}
+			.sm-visible {
+				display: block;
+			}
+		}
+		&.basic {
+			.table-body {
+				margin-right: 0;
+				& > ul {
+					width: 48%;
+					float: left;
+					&:nth-child(2n+1) {
+						margin-right: 4%;
+					}
+					li:last-child {
+						.btn-success {
+							width: 70%;
+						}
+					}
+				}
+			}
+			#pricing-features {
+				.table-body > ul {
+					width: 33%;
+					border-top: none;
+				}
+			}
+		}
+	}
+}

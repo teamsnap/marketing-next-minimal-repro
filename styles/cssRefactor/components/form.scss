@@ -1,0 +1,23 @@
+.Form--width50 {
+    
+    @media (min-width: $screen-md-min) {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
+.Form--width67 {
+
+    @media (min-width: $screen-md-min) {
+        max-width: 67%;
+        margin: 0 auto;
+    }
+}
+
+.Form--width33 {
+
+    @media (min-width: $screen-md-min) {
+        max-width: 33%;
+        margin: 0 auto;
+    }
+}

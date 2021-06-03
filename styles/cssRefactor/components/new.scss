@@ -1,0 +1,24 @@
+.New--badge {
+  background-color: $ts-orange;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 0.05rem;
+  border-radius: 4px;
+  padding: 1px 3px;
+  color: white;
+  margin-left: 6px;
+  display: inline-block;
+  transform: rotate(-3deg);
+  font-family: $museo-slab;
+  text-transform: uppercase;
+}
+
+.New--badge__white {
+  background-color: white;
+}
+
+.New--badge__large {
+  font-size: 16px;
+  padding: 10px 10px;
+  font-family: $open-sans;
+}

@@ -1,0 +1,89 @@
+.NavTabsHorizontal {
+    border-bottom: none;
+
+    li {
+        margin-bottom: 15px;
+
+        &.tabLinkListItem {
+            padding-bottom: 20px;
+            border-bottom: 2px solid $ts-grey;
+            transition: all 100ms ease-in;
+        }
+
+        a {
+            color: $text-color;
+            border-color: transparent;
+            padding: 0;
+            border-bottom: 2px solid $ts-grey;
+            transition: all 200ms ease;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $text-color;
+                background-color: transparent;
+                border-color: transparent;
+                border-bottom-color: $ts-blue;
+
+                &.tabLink {
+                    border-color: transparent;
+                }
+
+                .NavTabsHorizontalHeading {
+                    color: $ts-blue;
+                }
+            }
+
+            &.tabLink {
+                border-color: transparent;
+            }
+
+            &.Button {
+                @extend .Button;
+            }
+        }
+    }
+
+    li.active {
+
+        &.tabLinkListItem {
+            border-bottom-color: $ts-blue;
+        }
+
+        .NavTabsHorizontalHeading {
+            color: $ts-blue;
+        }
+
+        a {
+            color: $text-color;
+            background-color: transparent;
+            border-color: transparent;
+            border-bottom: 2px solid $ts-blue;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $text-color;
+                background-color: transparent;
+                border-color: transparent;
+                border-bottom: 2px solid $ts-blue;
+
+                &.tabLink {
+                    border-color: transparent;
+                }
+            }
+
+            &.tabLink {
+                border-color: transparent;
+            }
+
+            &.Button {
+                @extend .Button;
+            }
+        }
+    }    
+}
+
+.NavTabsHorizontalContent {
+    transition: none !important;
+}

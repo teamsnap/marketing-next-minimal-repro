@@ -1,0 +1,34 @@
+#side-trial.promo {
+	label {
+		position: relative;
+	}
+	.form-control-feedback {
+		font-size: $mod-font-size--2;
+	}
+}
+
+div#side-trial.promo {
+	ul.nav-tabs {
+		border-bottom: 2px solid $brand-primary;
+		li {
+			list-style: none;
+			padding: 0;
+			border-left: none !important;
+			&:before {
+				display: none;
+			}
+		}
+	}
+	.form-control-feedback {
+		top: 8px;
+		right: 0;
+	}
+}
+
+form#side-trial.promo {
+	.form-control-feedback {
+		top: 8px;
+		right: 0;
+		top: 8px !important;
+	}
+}

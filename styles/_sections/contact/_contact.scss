@@ -1,0 +1,41 @@
+#Contact {
+
+	aside {
+
+		h5.text-primary {
+			margin-bottom: 30px;
+		}
+	}
+
+    .social-icons {
+
+        li {
+            float: left;
+            display: block;
+            padding: 0 0 5px 5px;
+            padding-left: 5px !important;
+        }
+
+        a {
+            text-align: center;
+            display: block;
+            height: 25px;
+            width: 25px;
+            line-height: 25px;
+            font-size: 14px;
+            border-radius: 3px;
+            background: $brand-primary;
+            transition: background-color .25s ease-in-out;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background: lighten($brand-primary, 5%);
+            }
+
+            svg {
+                fill: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+//-------------------------------------------//
+//         Home Page Form Styles
+//-------------------------------------------//
+
+#side-trial,
+.form-screen {
+	height: auto;
+	position: relative;
+	padding: 6px;
+	background: rgba(255, 255, 255, 0.70);
+	border-radius: 10px;
+
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+//-------------------------------------------//
+//           Features Section
+//-------------------------------------------//
+
+#Features,
+#Testimonials {
+	& > .container {
+		padding-bottom: 60px;
+	}
+}
+
+#Features {
+	li {
+		padding-bottom: 25px;
+	}
+	h4 {
+		margin: 0 0 5px 0;
+		color: $brand-primary;
+		+ p {
+			color: $brand-primary-dark;
+			font-size: $font-size-h6;
+			margin-top: 0px;
+		}
+	}
+}

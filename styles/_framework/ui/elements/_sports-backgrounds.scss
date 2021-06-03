@@ -1,0 +1,102 @@
+section,
+div,
+article {
+
+	&.bg-image-fluid {
+
+        &.Field {
+            background-image: url('#{$img-path}field.jpg');
+        }
+
+		&.Baseball {
+			background-image: url('#{$img-path}baseball.jpg');
+		}
+
+		&.Baseball2 {
+			background-image: url('#{$img-path}baseball2.jpg');
+		}
+
+		&.Basketball {
+			background-image: url('#{$img-path}basketball.jpg');
+		}
+
+		&.Football {
+			background-image: url('#{$img-path}football2.jpg');
+		}
+
+		&.Cheerleading {
+			background-image: url('#{$img-path}cheer-leading.jpg');
+		}
+
+		&.Cricket {
+			background-image: url('#{$img-path}cricket.jpg');
+		}
+
+		&.Cross-Country.Skiing {
+			background-image: url('#{$img-path}cross-country-ski.jpg');
+		}
+
+		&.Ice.Hockey,
+		&.Hockey {
+			background-image: url('#{$img-path}ice-hockey.jpg');
+		}
+
+		&.Kickball {
+			background-image: url('#{$img-path}kickball.jpg');
+		}
+
+		&.Lacrosse {
+			background-image: url('#{$img-path}lacrosse.jpg');
+		}
+
+		&.Rugby {
+			background-image: url('#{$img-path}rugby.jpg');
+		}
+
+		&.Soccer {
+			background-image: url('#{$img-path}soccer.jpg');
+		}
+
+		&.Soccer2 {
+			background-image: url('#{$img-path}soccer2.jpg');
+		}
+
+		&.play-on{
+			background-image: url('#{$img-path}soccer.jpg');
+		}
+
+		&.Softball {
+			background-image: url('#{$img-path}softball.jpg');
+		}
+
+		&.Swimming {
+			background-image: url('#{$img-path}swimming.jpg');
+		}
+
+        &.Scouting {
+			background-image: url('#{$img-path}scouts.jpg');
+		}
+
+		&.Tennis {
+			background-image: url('#{$img-path}tennis.jpg');
+		}
+
+		&.Volleyball {
+			background-image: url('#{$img-path}volleyball.jpg');
+		}
+
+		&.Book.Clubs,
+		&.Book.Clubs {
+			background-image: url('#{$img-path}book-club.jpg');
+		}
+
+		&.Gaming.Clans,
+		&.Gaming.Clans {
+			background-image: url('#{$img-path}video-games.jpg');
+		}
+
+		&.Scouting {
+			background-image: url('#{$img-path}scouts.jpg');
+		}
+	}
+}

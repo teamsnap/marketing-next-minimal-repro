@@ -1,0 +1,23 @@
+.Accordion {
+  margin-bottom: 30px;
+
+  svg {
+    transition: all 150ms ease;
+  }
+
+  [aria-expanded='true'] {
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .card-body {
+    font-size: 18px;
+    background-color: $gray-lighter;
+    padding: 15px;
+
+    P {
+      margin-bottom: 0px;
+    }
+  }
+}

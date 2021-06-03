@@ -1,0 +1,651 @@
+#Pricing {
+  .table-heading h4,
+  li {
+    height: 30px;
+    line-height: 30px;
+    list-style-type: none;
+  }
+
+  .crossed {
+    color: $brand-primary;
+    opacity: 0.15;
+    font-size: 75%; // don't reset to type variables
+  }
+
+  .checked {
+    color: $brand-success;
+    display: none;
+    padding-top: 2px;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+
+  .btn-success {
+    margin-top: 15px;
+    width: 100%;
+
+    & > a {
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+
+  .storage {
+    height: 65px;
+
+    .example {
+      font-size: $mod-font-size--2;
+      font-weight: 500;
+    }
+
+    .title {
+      font-size: $mod-font-size--2;
+      font-weight: 500;
+    }
+
+    .progress {
+      margin: 0 5% 1px;
+      background-color: lighten($gray-light, 17.5%);
+      box-shadow: inset 0 1px 2px rgba($brand-primary-dark, 0.35);
+
+      .progress-bar-striped {
+        background-color: $brand-primary;
+        background-image: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.15) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.15) 50%,
+          rgba(255, 255, 255, 0.15) 75%,
+          transparent 75%,
+          transparent
+        );
+        background-size: 40px 40px;
+      }
+
+      .progress-bar-striped.progress-bar-success {
+        background-color: $brand-success;
+        background-image: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.15) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.15) 50%,
+          rgba(255, 255, 255, 0.15) 75%,
+          transparent 75%,
+          transparent
+        );
+        background-size: 40px 40px;
+      }
+    }
+  }
+
+  .featured-plan .storage .progress {
+    background-color: lighten($brand-success, 40%);
+  }
+
+  .table-heading {
+    width: 250px;
+    float: left;
+    display: none;
+
+    .storage h4 {
+      line-height: 65px;
+    }
+
+    h4 {
+      margin: 0;
+      font-size: $mod-font-size-base;
+      color: $gray;
+      text-indent: 15px;
+      display: inline-block;
+    }
+
+    li {
+      &:nth-child(2n + 2) {
+        background: #f4f8fc;
+      }
+
+      &:nth-child(2n + 1) {
+        background: #fff;
+      }
+    }
+
+    .row-heading {
+      height: 75px;
+      background: transparent;
+
+      h3 {
+        color: $gray;
+        padding-top: 50px;
+        font-size: $mod-font-size-base;
+        margin: 0;
+        text-indent: 15px;
+      }
+    }
+  }
+
+  .table-body {
+    padding-left: 0;
+
+    .xs-hidden {
+      display: none;
+    }
+
+    .sm-hidden {
+      display: block;
+
+      .heading {
+        font-size: $mod-font-size--1;
+        line-height: 30px;
+      }
+    }
+
+    .sm-visible {
+      display: none;
+
+      .heading {
+        font-size: $mod-font-size--1;
+        line-height: 30px;
+      }
+    }
+
+    .feature {
+      display: block;
+      font: {
+        size: 14px;
+        family: $museo-300;
+      }
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    & > ul {
+      width: auto;
+      margin: 0 auto 30px;
+    }
+
+    li {
+      text-align: center;
+
+      &:nth-child(2n + 2) {
+        background: #f4f8fc;
+      }
+
+      &:nth-child(2n + 1) {
+        background: #fff;
+      }
+    }
+  }
+
+  .basic-plan,
+  .free-plan {
+    li {
+      border-left: 1px solid rgba($brand-primary, 0.35);
+      border-right: 1px solid rgba($brand-primary, 0.35);
+
+      &:first-child {
+        border-left: none;
+      }
+    }
+  }
+
+  .ultra-plan {
+    li {
+      border-right: 1px solid rgba($brand-primary, 0.35);
+      border-left: 1px solid rgba($brand-primary, 0.35);
+
+      &:first-child {
+        border-right: none;
+      }
+    }
+  }
+
+  .basic-plan,
+  .free-plan,
+  .ultra-plan {
+    li {
+      border-bottom: 1px solid rgba($brand-primary, 0.15);
+
+      &:last-child {
+        border-bottom: 1px solid rgba($brand-primary, 0.35);
+      }
+    }
+
+    .row-heading h3 {
+      @include gradient(#2778c1, #236bad);
+      border-bottom: 1px solid $brand-primary-dark;
+      font-size: $mod-font-size-2;
+    }
+  }
+
+  .basic-plan .row-heading h3 {
+    border-left: 1px solid rgba(#fff, 0.5);
+  }
+
+  .featured-plan {
+    box-shadow: 0 0 5px rgba($brand-primary-dark, 0.4);
+    position: relative;
+    z-index: 100;
+    border-left: 1px solid rgba($brand-success, 0.75);
+    border-right: 1px solid rgba($brand-success, 0.75);
+    border-bottom: 1px solid rgba($brand-success, 0.75);
+
+    li {
+      border-bottom: 1px solid rgba($brand-success, 0.35);
+
+      &:nth-child(2n + 2) {
+        background: #f9fff6;
+      }
+    }
+
+    .row-heading h3 {
+      border-bottom: 1px solid #4b9809;
+      @include gradient(#90d257, #66af28);
+      font-size: $mod-font-size-2;
+    }
+
+    .crossed {
+      color: $brand-success;
+      opacity: 0.35;
+    }
+  }
+
+  .row {
+    padding-bottom: 20px;
+  }
+
+  .table-heading {
+    width: 250px;
+    float: left;
+    padding-top: 68px;
+
+    .row-heading {
+      height: 198px;
+
+      h3 {
+        color: $gray;
+        padding-top: 175px;
+        font-size: $mod-font-size-base;
+        margin: 0;
+        text-indent: 15px;
+        height: auto;
+      }
+    }
+  }
+
+  .table-body {
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+
+    & > ul {
+      width: 100%;
+      float: left;
+      border-bottom: none;
+
+      &:nth-child(2n + 1) {
+        margin-right: 0;
+      }
+
+      li:last-child {
+        // background: #f4f8fc;
+        border-left: none;
+        border-right: none;
+
+        .btn-success {
+          margin-bottom: 15px;
+          width: 95%;
+        }
+      }
+    }
+
+    .row-heading {
+      height: 188px;
+      padding-top: 25px;
+      padding-bottom: 0;
+      background: transparent !important;
+
+      h3 {
+        background: $brand-primary;
+        height: 210px - 25px;
+        color: #fff;
+        margin-top: 0;
+      }
+    }
+
+    .premium-plan {
+      .row-heading {
+        padding-top: 0;
+        height: 188px;
+
+        h3 {
+          height: 210px;
+          background: $brand-success;
+          padding-top: 26px;
+        }
+      }
+    }
+  }
+
+  #basic-features .basic-plan li:first-child {
+    border-right: 0;
+  }
+
+  #basic-features .ultra-plan li:first-child {
+    border-left: 0;
+  }
+
+  #league-features {
+    display: none;
+
+    .checked {
+      color: $brand-success;
+    }
+
+    .cl-list {
+      &.odd,
+      &:nth-child(2n + 1) {
+        background: #fffaf2;
+      }
+
+      &.even,
+      &:nth-child(2n + 2) {
+        background: #fff;
+      }
+    }
+
+    .odd {
+      background: #fffaf2;
+    }
+
+    .even {
+      background: #fff !important;
+    }
+
+    .basic-plan,
+    .premium-plan,
+    .ultra-plan {
+      li {
+        border-left: 1px solid rgba($brand-success, 0.5);
+        border-bottom: 1px solid rgba($brand-success, 0.5);
+
+        &:first-child {
+          border-left: none;
+        }
+      }
+    }
+
+    .ultra-plan {
+      li {
+        border-right: 1px solid rgba($brand-warning, 0.5);
+
+        &:first-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+  // I can't deal with the css above
+  // League Specific Styling
+  .league-page-team-table {
+    .table-heading {
+      .row-heading {
+        height: 44px;
+        margin-top: -33px;
+
+        h3 {
+          padding-top: 0;
+        }
+      }
+    }
+
+    .table-body {
+      .row-heading {
+        height: 79px;
+
+        h3 {
+          padding-top: 15px;
+        }
+      }
+
+      .premium-plan {
+        .row-heading {
+          height: 79px;
+
+          h3 {
+            height: 79px;
+            padding-top: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  #league-features {
+    .table-body {
+      .row-heading {
+        height: 60px;
+
+        h3 {
+          //height: 210px - 25px;
+          padding-top: 5px;
+        }
+      }
+
+      .premium-plan {
+        .row-heading {
+          height: 60px;
+
+          h3 {
+            height: 60px;
+            padding-top: 30px;
+          }
+        }
+      }
+    }
+
+    .free-plan li {
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  #league-features {
+    padding-bottom: 70px;
+
+    .c-l-pricing--cta {
+      width: 45%;
+      display: block;
+      margin: 25px auto 0;
+    }
+
+    .c-l-pricing--price {
+      font-weight: bold;
+      color: $brand-success;
+      font-family: $museo-700;
+
+      span {
+        font-weight: normal;
+      }
+    }
+
+    .cl-pricing-teaser {
+      width: 600px;
+      font-family: $open-sans;
+    }
+
+    .basic-plan,
+    .free-plan,
+    .ultra-plan {
+      li {
+        border-bottom: 1px solid rgba($brand-primary, 0.15);
+
+        &:last-child {
+          border-bottom: 1px solid rgba($brand-primary, 0.35);
+        }
+
+        &:nth-child(2n + 1) {
+          background: #fff;
+        }
+
+        &:nth-child(2n + 2) {
+          background: #f4f8fc;
+        }
+      }
+
+      .row-heading h3 {
+        @include gradient(#2778c1, #236bad); // blue
+        border-bottom: 1px solid $brand-primary-dark;
+        font-size: $mod-font-size-2;
+      }
+    }
+
+    .basic-plan {
+      li {
+        border-left-color: rgba($brand-primary, 0.35);
+
+        &.row-heading h3 {
+          border-left: 1px solid rgba(#fff, 0.5);
+          border-top-left-radius: 5px;
+        }
+      }
+    }
+
+    .ultra-plan {
+      li {
+        border-right-color: rgba($brand-primary, 0.35);
+      }
+    }
+
+    .featured-plan {
+      box-shadow: 0 0 5px rgba($brand-primary-dark, 0.4);
+      position: relative;
+      z-index: 100;
+      border-left: 1px solid rgba($brand-success, 0.75);
+      border-right: 1px solid rgba($brand-success, 0.75);
+      border-bottom: 1px solid rgba($brand-success, 0.75);
+
+      li {
+        border-bottom: 1px solid rgba($brand-success, 0.35);
+
+        &:nth-child(2n + 1) {
+          background: #fff;
+        }
+
+        &:nth-child(2n + 2) {
+          background: #f9fff6;
+        }
+      }
+
+      .row-heading h3 {
+        border-bottom: 1px solid $brand-success;
+        @include gradient(#90d257, #66af28);
+        font-size: $mod-font-size-2;
+      }
+
+      .crossed {
+        color: $brand-success;
+        opacity: 0.35;
+      }
+    }
+
+    .c-l-pricing--add-on {
+      color: $brand-primary-dark;
+      padding-top: 15px;
+      padding-right: 60px;
+    }
+
+    .nudge-down {
+      padding-top: 60px;
+      // adding this because so many overrides between markup and css. AHHHHHHHH.
+      // Gets the striping going the correct way
+      li {
+        &:nth-child(2n + 1) {
+          background: #f4f8fc;
+        }
+
+        &:nth-child(2n + 2) {
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  #basic-features {
+    .org-teams-plan {
+      .free-plan {
+        li {
+          border-left: none;
+          border-bottom: none;
+        }
+      }
+
+      .basic-plan {
+        .row-heading {
+          @media only screen and (min-width: 992px) {
+            h3 {
+              border-top-left-radius: 5px;
+            }
+          }
+        }
+        @media only screen and (max-width: 992px) {
+          padding-right: 4%;
+        }
+      }
+    }
+  }
+}
+//Team Page Specific styling
+
+.pricing-team {
+  .price-plan {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .price-box {
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    margin: 0 6%;
+  }
+
+  .monthly {
+    line-height: 40px;
+  }
+
+  .price-text-small {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-style: italic;
+    font-size: $mod-font-size--3;
+  }
+
+  .price-text-annual {
+    font-size: $mod-font-size--3;
+    display: block;
+  }
+}
+
+#Pricing.cl--pricing .league-page-team-table {
+  .row-heading h3 {
+    padding-top: 30px;
+  }
+
+  .featured-plan {
+    border: none !important;
+  }
+
+  li {
+    border: none !important;
+    height: 40px;
+    padding-top: 5px;
+  }
+}

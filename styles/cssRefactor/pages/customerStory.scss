@@ -1,0 +1,35 @@
+.CustomerStory {
+
+    p {
+        font-size: 17px;
+    }
+
+    blockquote {
+        
+
+        p {
+            border-left: 4px solid $ts-blue;
+            font-size: 18px;
+            padding-left: 20px;
+        }
+    }
+
+    .CustomerStorySidenote {
+
+        p {
+            font-size: 15px;
+        }
+    }
+}
+
+.CustomerStorySidebar {
+    
+    @media (min-width: $screen-md-min) {
+        position: sticky;
+        top: -500px;
+    }
+}
+
+.CustomerStoryBlock {
+    font-size: 15px;
+}

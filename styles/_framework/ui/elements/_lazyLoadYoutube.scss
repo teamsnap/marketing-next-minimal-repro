@@ -1,0 +1,91 @@
+.youtube-wrapper {
+  max-width: 680px;
+  padding: 0 20px;
+
+  &.center {
+    margin: 60px auto;
+  }
+}
+
+.youtube--lazy,
+.youtube--clickLazy {
+  background-color: #000;
+  margin-bottom: 30px;
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+  cursor: pointer;
+
+  &.youtube--custom {
+    background-color: transparent;
+
+    img {
+      padding-top: 49px;
+    }
+  }
+
+  img {
+    width: 100%;
+    top: -16.82%;
+    left: 0;
+    opacity: 1;
+  }
+
+  &:hover {
+    .play-button {
+      background-color: darken(#f00, 15%); // youtube red
+    }
+  }
+
+  .play-button {
+    width: 90px;
+    height: 60px;
+    background-color: #f00;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    opacity: 0.8;
+    border-radius: 6px;
+    transition: all 100ms ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // These vars come from TeamSnap UI
+    &:before {
+      content: '';
+      width: $su-large;
+      height: $su-large;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin: $su-xsmall;
+      border-top: solid $su-xxsmall white;
+      border-right: solid $su-xxsmall transparent;
+      box-shadow: 0 0 0 1px white;
+      animation: SpinAnimation 1s linear infinite;
+    }
+  }
+
+  img,
+  .play-button {
+    cursor: pointer;
+  }
+
+  .play-button {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  img,
+  iframe,
+  .play-button {
+    position: absolute;
+  }
+
+  iframe {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}

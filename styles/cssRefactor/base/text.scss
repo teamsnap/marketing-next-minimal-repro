@@ -1,0 +1,44 @@
+// Alignment modifications
+
+// Color modifications
+.text--white {
+  color: white;
+}
+
+.text--green {
+  color: $ts-green !important;
+}
+
+.text--base {
+  color: $text-color;
+}
+
+// TODO: fix this
+.text--orange {
+  color: $ts-orange !important;
+}
+
+.text--red {
+  color: $ts-red;
+}
+
+.text--darkBlue {
+  color: $ts-darkblue;
+}
+
+.text--blue {
+  color: $ts-blue;
+}
+
+.text--grey {
+  color: $ts-grey;
+}
+
+.text--light-blue {
+  color: lighten($ts-blue, 55%);
+}
+
+// Style modifications
+.text--uppercase {
+  text-transform: uppercase;
+}

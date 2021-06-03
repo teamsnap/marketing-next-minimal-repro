@@ -1,0 +1,45 @@
+.TeamStoryRow {
+    
+    @media (min-width: $screen-md-min) {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.TeamStoryImage {
+    
+    @media (min-width: $screen-md-min) {
+        margin-top: -150px;
+        margin-left: -20px;
+    }
+}
+
+.TeamStoryImage--first {
+    
+    @media (min-width: $screen-md-min) {
+        margin-top: -250px;
+        margin-left: -90px;
+    }
+}
+
+.TeamStoryImage--last {
+    
+    @media (min-width: $screen-md-min) {
+        margin-left: -30px;
+    }
+}
+
+.TeamStoryAbsolute {
+    display: none;
+    
+    @media (min-width: $screen-md-min) {
+        display: block;
+        position: absolute;
+        left: -50px;
+    }
+}
+

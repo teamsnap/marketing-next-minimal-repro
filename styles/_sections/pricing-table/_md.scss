@@ -1,0 +1,368 @@
+@include responsive(screen-md) {
+	$heading-height: 210px;
+	$defualt-border: 1px solid #efefef;
+
+	#Pricing {
+		.btn-success {
+			width: 100%;
+			margin: 0 auto;
+			float: none;
+			position: relative;
+			display: block;
+		}
+
+		.table-heading {
+			display: block;
+
+			.row-heading {
+				background: transparent !important;
+				border-left: none;
+			}
+
+			li {
+				border-left: $defualt-border;
+				border-bottom: $defualt-border;
+			}
+		}
+
+		.table-body {
+			.teams-pricing-h3 {
+				font-size: $mod-font-size-5 !important;
+			}
+			padding-left: 250px;
+			padding-right: 0;
+
+			.feature {
+				display: none;
+			}
+
+			.checked {
+				display: inline-block;
+			}
+
+			.crossed {
+				display: none;
+			}
+
+			& > ul {
+				width: 25%;
+				margin-bottom: 0;
+
+				&:nth-child(2n + 1) {
+					margin-right: 0;
+				}
+			}
+
+			.featured-plan {
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+			}
+
+			.ultra-plan {
+				.row-heading h3 {
+					border-top-right-radius: 5px;
+				}
+
+				li:last-child {
+					border-bottom-right-radius: 5px;
+				}
+			}
+
+			.sm-hidden {
+				display: none;
+			}
+
+			.sm-visible {
+				display: none;
+			}
+		}
+
+		#basic-features {
+			.table-heading h3 {
+				color: $brand-primary;
+			}
+
+			.free-plan {
+				.row-heading h3 {
+					border-top-left-radius: 5px;
+				}
+			}
+
+			.basic-plan,
+			.free-plan {
+				li {
+					border-left: 1px solid rgba($brand-primary, .35);
+					border-right: none;
+
+					&:first-child {
+						border-left: none;
+					}
+				}
+			}
+
+			.ultra-plan {
+				li {
+					border-right: 1px solid rgba($brand-primary, .35);
+					border-left: none;
+
+					&:first-child {
+						border-right: none;
+					}
+				}
+			}
+		}
+
+		#league-features {
+			display: block;
+
+			.heading {
+				font-size: $mod-font-size-2;
+			}
+
+			.table-heading {
+				li {
+					&:first-child {
+						border-top: $defualt-border;
+					}
+				}
+			}
+
+			.table-body {
+				.free-plan {
+					li {
+						border-bottom: $defualt-border;
+
+						&:first-child {
+							border-top: $defualt-border;
+						}
+					}
+				}
+			}
+		}
+
+		#pricing-features {
+			.table-heading {
+				li {
+					&:first-child {
+						border-top: $defualt-border;
+					}
+				}
+			}
+
+			.table-body {
+				.free-plan {
+					li {
+						border-bottom: $defualt-border;
+
+						&:first-child {
+							border-top: $defualt-border;
+						}
+					}
+				}
+			}
+
+			li {
+				&:nth-child(2n + 2) {
+					background: #f4f8fc;
+				}
+
+				&:nth-child(2n + 1) {
+					background: #fff;
+				}
+
+				&:last-child {
+					overflow: visible;
+				}
+			}
+
+			.inline {
+				display: inline !important;
+
+				& + input {
+					display: inline !important;
+				}
+
+				&.sm-hidden {
+					display: none !important;
+				}
+			}
+
+			.table-body {
+				& > ul {
+					width: 25%;
+					float: left;
+				}
+
+				.select {
+					width: 50%;
+					display: inline-block;
+					margin-top: 5px;
+				}
+
+				.free-plan {
+					margin-bottom: 0;
+
+					li:last-child {
+						height: 40px;
+						line-height: 40px;
+						border-left: none;
+						border-top: none;
+						border-right: none;
+						padding: 0;
+					}
+				}
+
+				.basic-plan,
+				.premium-plan,
+				.ultra-plan {
+					li {
+						height: 40px;
+						line-height: 40px;
+						border-left: 1px solid $gray-lighter;
+						border-bottom: 1px solid $gray-lighter;
+						border-right: none;
+
+						&:last-child {}
+					}
+					margin-bottom: 30px;
+				}
+
+				.ultra-plan {
+					li {
+						border-right: 1px solid $gray-lighter;
+
+						&:last-child {
+							border-right: none;
+						}
+					}
+				}
+
+				.mobile-cost-title {
+					height: 40px;
+					line-height: 40px;
+				}
+
+				label[for="plan-selector"] {
+					display: none;
+				}
+			}
+		}
+
+		&.basic {
+			.table-body {
+				padding-left: 250px;
+
+				& > ul:nth-child(1n + 1) {
+					width: 25%;
+					float: left;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	#Pricing.cl--pricing {
+
+		.nudge-down {
+			padding-top: 196px !important;
+		}
+
+		#league-features {
+			margin-bottom: 0px;
+			padding-bottom: 0px;
+		}
+
+		.ultra-plan,
+		.free-plan,
+		.basic-plan {
+			margin-top: 40px !important;
+		}
+
+		.ultra-plan,
+		.free-plan,
+		.basic-plan {
+			padding: 0px 5px !important;
+		}
+
+		.ultra-plan,
+		.premium-plan,
+		.free-plan,
+		.basic-plan {
+			width: 33% !important;
+
+			h3 {
+				background: none !important;
+				height: auto !important;
+				border: none !important;
+				padding-top: 0px !important;
+				font-size: $mod-font-size-6 !important;
+				margin-bottom: 20px;
+			}
+
+			.row-heading {
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+				background-color: $ts-blue !important;
+				height: auto !important;
+				padding: 20px;
+
+				.Button {
+					margin: 10px 0px;
+				}
+			}
+		}
+
+		.featured-plan {
+			border: none !important;
+
+			.row-heading {
+				height: auto !important;
+				padding: 24px 0px;
+				background-color: $ts-green !important;
+				
+				h3 {
+					height: auto !important;
+					margin-top: 30px;
+				}
+			}
+		}
+
+		.table-heading {
+			width: 250px;
+		}
+
+		.table-body {
+			padding-left: 250px;
+		}
+		
+
+		.cl-list,
+		.even,
+		.odd {
+			height: 50px;
+			padding-top: 10px;
+			border: none !important;
+		}
+	}
+
+	#Pricing.cl--pricing__b {
+		max-width: 1440px;
+		margin: 0 auto;
+
+		.Button {
+			white-space: pre-wrap;
+			font-size: 17px;
+		}
+
+		.nudge-down {
+			padding-top: 206px !important;
+		}
+
+		.ultra-plan,
+		.premium-plan,
+		.free-plan,
+		.basic-plan {
+			width: 25% !important;
+		}
+	}
+}

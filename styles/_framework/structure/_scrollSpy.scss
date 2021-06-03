@@ -1,0 +1,140 @@
+#navbar-example {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 99;
+    margin-bottom: 45px;
+    height: 0;
+    overflow: hidden;
+
+    &.open {
+        height: auto;
+    }
+}
+
+#onPageMenu {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.scroll-navbar__item {
+    list-style-type: none;
+    padding-left: 0 !important;
+    padding-bottom: 4px;
+
+    &.scroll-navbar__item--single {
+        padding: 5px 10px !important;
+
+        a {
+            color: gray;
+        }
+
+        &.active {
+            background-color: lighten(#236bad, 55%);
+            border-radius: 8px;
+
+            a {
+                color: #236bad;
+            }
+        }
+    }
+
+    &:before {
+        display: none;
+    }
+
+    .scroll-navbar__sub-list {
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    span {
+        padding: 8px;
+        display: block;
+        border-radius: 8px;
+    }
+
+    &:hover {
+
+        span {
+            background-color: lighten(#236bad, 55%);
+        }
+    }
+
+    &.active {
+
+        .scroll-navbar__sub-list {
+            height: auto;
+            opacity: 1;
+        }
+
+        a {
+            color: gray;
+        }
+
+        span {
+            color: white;
+            background-color: #236bad;
+        }
+    }
+}
+
+.scroll-navbar__sub-list {
+
+    li {
+        list-style: none !important;
+        margin-left: 8px;
+        padding-bottom: 4px;
+        border-radius: 8px;
+        margin-top: 4px;
+        font-size: 14px;
+
+        &:hover {
+            background-color: lighten(#236bad, 50%);
+        }
+
+        a {
+            display: block;
+            padding: 6px;
+        }
+
+        &.active {
+            background-color: lighten(#236bad, 55%);
+
+            a {
+                color: #236bad;
+            }
+        }
+    }
+}
+
+@include responsive(screen-md) {
+
+    #nav-example {
+        position: relative;
+    }
+
+    #navbar-example {
+        position: fixed;
+        overflow: hidden;
+        width: 250px;
+        margin-top: 70px;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        height: auto;
+        background-color: transparent;
+
+        &.down {
+            // TODO: Fix positioning when hitting footer
+            // tnis is brittle
+            bottom: 399px;
+        }
+    }
+}

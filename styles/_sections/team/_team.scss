@@ -1,0 +1,52 @@
+// TODO: Refactor with new CSS to not be redunant
+
+$cl-light-blue: #EEF7FF;
+$cl-dark-blue: #549CE7;
+
+.tm {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        &:not(.text--default) {
+            font-family: $proxima-nova;
+        }
+    }
+
+    .bg--light-blue {
+        background-color: $cl-light-blue;
+    }
+
+    .bg--blue {
+        background-color: $cl-dark-blue;
+    }
+}
+
+.tm__quote {
+
+    &.cl__quote--less-height {
+        min-height: 220px;
+    }
+
+    .tm__quote-mark {
+        display: block;
+        font-size: 150px;
+        line-height: 0px;
+        opacity: .6;
+    }
+
+    .tm__quote-cite {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+
+        img {
+            max-width: 30px;
+            margin-right: 20px;
+        }
+    }
+}

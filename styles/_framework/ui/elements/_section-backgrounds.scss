@@ -1,0 +1,390 @@
+.bg-primary {
+    // Given the contrast here, this is the only class to have its color inverted
+    // automatically.
+    color: #fff;
+}
+
+@include bg-variant('.bg-primary', $brand-primary);
+
+@include bg-variant('.bg-success', $state-success-bg);
+
+@include bg-variant('.bg-info', $state-info-bg);
+
+@include bg-variant('.bg-warning', $state-warning-bg);
+
+@include bg-variant('.bg-danger', $state-danger-bg);
+
+.bg-info {
+
+    h3,
+    h4 {
+        color: $brand-primary;
+    }
+}
+
+.bg-primary {
+    background: $brand-primary;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: #fff;
+    }
+
+    a {
+        color: $gray-lighter;
+
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    &.cta {
+        @include gradient($brand-primary, darken($brand-primary, 3%));
+        border-top: 1px solid rgba(255, 255, 255, .25);
+    }
+}
+
+header.bg-primary {
+
+    .container {
+        padding: 0;
+    }
+}
+
+.bg--light-green {
+    background-color: lighten($ts-green, 40%);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $brand-primary-dark;
+    }
+}
+
+.bg-primary-dark {
+    background-color: $brand-primary-dark;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: #fff;
+    }
+}
+
+.bg-success {
+    background-color: $brand-success;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: #fff;
+    }
+}
+
+.bg-primary-dark *,
+.bg-primary * {
+    color: #fff;
+}
+
+section,
+div,
+header {
+
+    &.hero {
+        overflow: hidden;
+        padding-top: 0;
+        padding-bottom: 0;
+        position: relative;
+        background-color: #4c9ee8;
+        background-size: cover !important;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        &.base-image {
+            background-image: url('#{$img-path}blue-people.jpg');
+        }
+
+        &.about-image {
+            background-image: url('/user/pages/06.about/hero.jpg');
+            padding: 140px 0;
+
+            h1 {
+                position: relative;
+
+                &:before,
+                &:after {
+                    content: '';
+                    width: 100vw;
+                    display: block;
+                    height: 4px;
+                    border-radius: 10px;
+                    background-color: white;
+                    position: absolute;
+
+                    @media (min-width: $screen-md-min) {
+                        width: 80vw;
+                        height: 8px;
+                    }
+                }
+
+                    &:before {
+                        top: -30px;
+                        right: 0px;
+                        animation-delay: 200ms;
+                    }
+
+                    &:after {
+                        bottom: -30px;
+                        left: 0px;
+                        animation-delay: 600ms;
+                    }
+            }
+
+            > .container {
+                max-width: 700px;
+            }
+        }
+
+        &.c-l-image {
+            background-image: url('#{$img-path}CL_Hero_02.jpg');
+        }
+
+        * {
+            color: #fff;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-shadow: 0 -1px 0 darken($brand-primary-dark, 1.25);
+        }
+
+        h4,
+        h5,
+        h6,
+        p {
+            text-shadow: 0 -1px 0 rgba($brand-primary-dark, .75);
+        }
+
+        & > *:last-child {
+            padding-bottom: 50px;
+        }
+
+        .hero-image {
+            position: absolute;
+            max-width: 150%;
+            min-width: 100%;
+            top: 0;
+            left: 0;
+
+            &.right {
+                right: 0;
+            }
+
+            &.left {
+                left: 0;
+            }
+
+            &.bottom {
+                bottom: 0;
+            }
+
+            &.top {
+                top: 0;
+            }
+        }
+    }
+}
+
+.About--icon {
+    background-image: url("/images/teamsnap-badge.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    right: -30px;
+    bottom: 0px;
+
+    @media (max-width: $screen-md-min) {
+        display: none;
+    }
+}
+
+section,
+div,
+article {
+
+    &.bg-image-fluid {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+
+        .screen-bg {
+            border-top-right-radius: 30px;
+            border-top-left-radius: 30px;
+            border: 1px solid rgba(#fff, .25);
+            border-bottom: none;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            @include gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0));
+        }
+    }
+}
+
+section.bg-info {
+
+    .hero-image {
+        margin-bottom: 0px - $grid-gutter-width;
+    }
+}
+
+.bg-primary-dark.cta {
+    font-size: $mod-font-size-base;
+
+    .pull-right {
+        float: none !important;
+    }
+
+    div[class^='col'] {
+        text-align: center;
+
+        h2,
+        h3 {
+            text-align: center;
+        }
+
+        // .btn {
+        //     text-align: center !important;
+        // }
+    }
+
+    div.col-md-8 {
+        padding-bottom: 15px
+    }
+
+    h2 {
+        font-size: $mod-font-size-5;
+    }
+
+    h3 {
+        font-size: $mod-font-size-3;
+    }
+
+    // .btn {
+    //
+    //     &.btn-display,
+    //     &.btn-large {
+    //         h2 {
+    //             font-size: $mod-font-size-3;
+    //         }
+    //     }
+    // }
+}
+
+.authors,
+.podcast-author {
+    @include gradient(#f6f6f6, #fafafa);
+    border-radius: 5px;
+    border: 1px solid #eee;
+    padding: 15px;
+    box-shadow: 1px 1px 1px #eee inset;
+
+    .img-thumbnail {
+        padding: 0;
+        background: none;
+        border-radius: 5px;
+        float: left;
+        border: none;
+        box-shadow: none;
+    }
+
+    .img-thumbnail + p {
+        margin-left: 100px;
+        padding-left: 15px;
+        border-left: 1px solid #ddd;
+        margin-bottom: 0;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.podcast-author .img-thumbnail {
+    float: none;
+}
+
+@include responsive(screen-sm) {
+
+    .bg-primary-dark.cta {
+
+        [class^='col-sm'] .pull-right {
+            float: right !important;
+        }
+
+        div[class^='col-sm'] {
+            text-align: left;
+
+            h2,
+            h3 {
+                text-align: left;
+            }
+        }
+    }
+
+}
+
+@include responsive(screen-md) {
+
+    .bg-primary-dark.cta {
+
+        [class^='col-md'] .pull-right {
+            float: right !important;
+        }
+
+        div[class^='col-md'] {
+            text-align: left;
+
+            h2,
+            h3 {
+                text-align: left;
+            }
+        }
+
+        div.col-md-8 {
+            padding-bottom: 15px
+        }
+    }
+
+    section,
+    header,
+    div {
+
+        .hero {
+            min-height: 360px;
+        }
+
+    }
+
+}

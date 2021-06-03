@@ -1,0 +1,19 @@
+.ReviewBox {
+  font-size: 16px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+
+  cite {
+    font-family: $open-sans;
+    opacity: 0.8;
+  }
+}
+
+.ReviewBox--small {
+  min-height: 115px;
+}
+
+.ReviewBox--large {
+  min-height: 315px;
+}

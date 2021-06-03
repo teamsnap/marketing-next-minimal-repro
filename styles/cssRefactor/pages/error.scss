@@ -1,0 +1,12 @@
+.errorPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+  .col-md-5 {
+    width: calc((5 / 12) * 100% = 1px);
+  }
+}

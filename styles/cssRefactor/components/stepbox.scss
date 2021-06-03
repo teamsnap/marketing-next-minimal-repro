@@ -1,0 +1,24 @@
+.StepBox {
+    padding: $su-large $su-large $su-large 0px;
+    margin-bottom: $su-large;
+    display: flex;
+}
+
+.StepBoxNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $su-large;
+    color: $ts-blue;
+    font-size: $mod-font-size-5;
+    overflow: hidden;
+    border-radius: 100px;
+    width: 65px;
+    height: 65px;
+    margin-right: $su-large;
+    margin-left: -$su-large;
+}
+
+.StepBoxNumber--text {
+    color: initial;
+}

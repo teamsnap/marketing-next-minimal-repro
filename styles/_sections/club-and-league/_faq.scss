@@ -1,0 +1,26 @@
+.FAQ--definition-list {
+
+    dt {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: $mod-font-size-2;
+    }
+}
+
+.SportLeagueFaq {
+    
+    .row {
+        position: relative;
+    }
+
+    #navbar-example {
+        position: relative;
+        overflow: auto;
+        margin-top: 0px;
+    }
+
+    #nav-example {
+        position: sticky;
+        top: 120px;
+    }
+}

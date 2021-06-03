@@ -1,0 +1,115 @@
+// [ Custom Built Mixins ]
+@mixin reset-btn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	opacity: 0 !important;
+	background: none;
+	background-color: transparent;
+	display: block;
+	padding: 0;
+	margin: 0;
+	box-sizing: none;
+	cursor: pointer;
+	border: none;
+	text-indent: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+}
+
+@mixin clear {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin transition($property, $duration, $timing-function) {
+	-webkit-transition: $property $duration $timing-function;
+	-moz-transition: $property $duration $timing-function;
+	-o-transition: $property $duration $timing-function;
+	transition: $property $duration $timing-function;
+}
+
+@mixin gradient($from, $to) {
+	background-image: linear-gradient(to bottom, $from, $to);
+}
+
+@mixin gradient-reverse($from, $to) {
+	background-image: linear-gradient(to top, $from, $to);
+}
+
+@mixin ss-pika() {
+	font-family: "SSPika";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	text-rendering: optimizeLegibility;
+	white-space: nowrap;
+	-webkit-font-feature-settings: "liga";
+	-moz-font-feature-settings: "liga=1";
+	-moz-font-feature-settings: "liga";
+	-ms-font-feature-settings: "liga" 1;
+	-o-font-feature-settings: "liga";
+	font-feature-settings: "liga";
+	-webkit-font-smoothing: antialiased;
+}
+
+@mixin responsive($width) {
+	@if $width == screen-xs {
+		@media only screen and (min-width: $screen-xs) {
+			@content;
+		}
+	} @else if $width == screen-sm {
+		@media only screen and (min-width: $screen-sm) {
+			@content;
+		}
+	} @else if $width == screen-md {
+		@media only screen and (min-width: $screen-md) {
+			@content;
+		}
+	} @else if $width == screen-lg {
+		@media only screen and (min-width: $screen-lg) {
+			@content;
+		}
+	}
+}
+
+@mixin media-query($mq) {
+
+	$breakpoint-found: false;
+
+	// Loop through the list of breakpoints we’ve provided in our settings file.
+	@each $breakpoint in $breakpoints {
+
+		// Grab the alias and the condition from their respective locations in
+		// the list.
+		$alias: nth($breakpoint, 1);
+		$condition: nth($breakpoint, 2);
+
+		// If the media query we’ve specified has an alias and a condition...
+		@if $mq == $alias and $condition {
+
+			// ...tell the mixin that we’ve found it...
+			$breakpoint-found: true;
+
+			// ...and spit it out here.
+			@media #{$condition} {
+				@content;
+			}
+
+		}
+
+	}
+
+	// If the user specifies a non-exitent alias, send them a warning.
+	@if $breakpoint-found == false {
+		@warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
+	}
+
+}

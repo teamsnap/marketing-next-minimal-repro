@@ -1,0 +1,82 @@
+.Message {
+  max-width: 600px;
+  background: linear-gradient(60deg, #00b113, #7fc243, #00bf8e, #00b113);
+  background-size: 600% 600%;
+  // the keyframes live in the healthcheck page file
+  animation: HealthCheckGradient 13s ease infinite;
+  color: white;
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  &.Message--blog {
+    width: 100%;
+    animation: none;
+    max-width: 100%;
+    background-image: url('/user/pages/11.leagues-and-clubs-resource-library/nation-map.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(26,107,175,.75);
+    color: #fff;
+  }
+}
+
+.Message--assignments {
+  max-width: 600px;
+  background: $ts-darkblue;
+  animation: none;
+  background-size: 100%;
+
+  .Message--Icon {
+    padding: 10px;
+  }
+}
+
+.Message--sportsDay {
+  max-width: 600px;
+  background: $ts-darkblue;
+  animation: none;
+  background-size: 100%;
+
+  h6 {
+    font-size: 24px;
+    margin-bottom: 5px;
+
+    a {
+      transition: all 150ms ease;
+    }
+
+    &:hover {
+      a {
+        color: white;
+        opacity: .8;
+      }
+    }
+  }
+
+  .Message--Icon {
+    padding: 10px;
+  }
+}
+
+.Message--Icon {
+  font-size: 100px;
+  margin-top: 15px;
+
+  @media (max-width: $screen-sm-min) {
+    padding: 20px;
+  }
+}
+
+.Message--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    background: none;
+    border: none;
+    padding: 3px 5px;
+  }
+}

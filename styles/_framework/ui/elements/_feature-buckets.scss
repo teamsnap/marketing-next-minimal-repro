@@ -1,0 +1,150 @@
+/*	CONTENT BLOCK 3-6
+/*----------------------------------------------------*/
+.league-club .feature-box {
+	//Todo This needs to be a variable
+	@include gradient(rgb(12, 81, 164), rgb(12, 81, 164));
+	margin: 20px 0;
+	padding: 35px 30px;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.league-club .feature-box:hover {
+	//Todo This needs to be a variable
+	@include gradient(rgb(36, 129, 238), rgb(12, 81, 164));
+}
+
+.league-club .feature-box .icon {
+	height: 120px;
+	width: 150px;
+	max-width: 100%;
+	display: block;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+	margin: 0 auto;
+	text-shadow: #084779 2px 2px 4px;
+}
+
+.league-club .feature-box .icon span {
+	line-height: 150px;
+	color: #ffffff;
+	font-size: $mod-font-size-14;
+}
+
+.league-club .feature-box p {
+	line-height: 25px;
+	color: #ffffff;
+	opacity: 0.85;
+}
+
+.league-club .feature-box h3 {
+	padding: 0;
+	color: #ffffff;
+}
+
+.league-club .feature-box .btn {
+	margin: 20px 0 5px;
+}
+
+.league-club .feature-box,
+.league-club .feature-box-orange,
+.league-club .feature-box-orange:hover,
+.league-club .feature-box-orange:hover .feature-icon,
+.league-club .feature-box:hover,
+.league-club .feature-box:hover .feature-icon,
+.league-club .feature-icon,
+.league-club .feature-icon {
+	transition: all 0.4s ease-in 0s;
+}
+
+.league-club .feature-box-orange {
+	//Todo colors need to be vars in vars.sass
+	@include gradient(#ff7b00, #ff4400);
+	margin: 20px 0;
+	padding: 35px 30px;
+	text-align: center;
+	border-radius: 4px;
+
+	&:hover {
+		@include gradient(#ff7b00, #ff4400);
+	}
+
+	.icon {
+		height: 120px;
+		width: 150px;
+		max-width: 100%;
+		display: block;
+		text-align: center;
+		vertical-align: middle;
+		position: relative;
+		margin: 0 auto;
+		text-shadow: #8C3507 2px 2px;
+
+		span {
+			line-height: 150px;
+			color: #ffffff;
+			font-size: $mod-font-size-14;
+		}
+	}
+
+	p {
+		line-height: 25px;
+		color: #ffffff;
+		opacity: 0.85;
+	}
+
+	h3 {
+		padding: 0;
+		color: #ffffff;
+	}
+
+	.btn {
+		margin: 20px 0 5px;
+	}
+
+	.btn-info {
+		border: #fff 2px solid;
+		color: #fff;
+	}
+
+	.btn-info:hover {
+		background: #fff;
+		border: 2px solid transparent;
+		border-bottom: 2px solid #fff;
+		color: #8C3507;
+	}
+}
+.btn-demo {
+	border: #fff 2px solid;
+	color: #fff;
+}
+
+.btn-demo:hover {
+	background: #fff;
+	border: 2px solid transparent;
+	border-bottom: 2px solid #fff;
+	color: #8C3507;
+}
+.modal--demo-body {
+	margin-bottom: 56px;
+}
+
+.btn-demo-2 {
+	border: #fff 2px solid;
+    color: #fff;
+	font-size: 14px;
+}
+
+.btn-demo-2:hover {
+	background: #fff;
+	border: 2px solid transparent;
+	border-bottom: 2px solid #fff;
+	color: #8C3507;
+}
+
+.feature-box-override {
+	.feature-box-paragraph {
+		margin-bottom: 37px;
+	}
+}

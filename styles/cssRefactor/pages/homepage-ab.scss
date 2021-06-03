@@ -1,0 +1,307 @@
+.HomepageAB--hero {
+  display: grid;
+  overflow: hidden;
+  background-image: url('/images/hero-video-cover.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-width: $screen-lg-min) {
+    display: grid;
+    grid-template-rows: 100vh;
+    background-image: none;
+  }
+
+  h1 small {
+    font-size: 20px;
+    vertical-align: middle;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+}
+
+.video-bg {
+  grid-area: 1 / 1 / -1 / -1;
+  min-width: 100%;
+  object-fit: contain;
+  z-index: -1;
+
+  @media (min-width: $screen-lg-min) {
+    min-height: 100vh;
+  }
+
+  &::-webkit-media-controls {
+    display: none !important;
+  }
+}
+
+.video-overlay {
+  grid-area: 1 / 1 / -1 / -1;
+  display: grid;
+  background-color: rgba(0, 0, 0, 0.65);
+
+  .container {
+    align-self: center;
+  }
+}
+
+.HomepageAB--roles {
+  margin-top: auto;
+  width: 100%;
+
+  h4 {
+    margin-top: 0px;
+  }
+
+  .row {
+    display: flex;
+    height: 100%;
+
+    @media (max-width: $screen-md-min) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .col-md-4 {
+
+    p {
+      font-size: 14px;
+    }
+    
+    @media (max-width: $screen-md-min) {
+      width: 100%;
+    }
+  }
+
+  .bg--white {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    > a {
+      margin-top: auto;
+      display: inline-block;
+    }
+  }
+}
+
+.HomepageAB--block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  hr {
+    margin-top: 45px;
+    border-width: 4px;
+    border-color: $ts-grey;
+    margin-bottom: 10px;
+  }
+
+  blockquote {
+    margin-top: 0px;
+    padding: 0px;
+    font-size: 16px;
+  }
+
+  cite {
+    color: $text-color;
+    font-size: 14px;
+    margin-top: 10px;
+
+    span {
+      font-family: $museo-slab;
+    }
+  }
+
+  .Link {
+    line-height: 2rem;
+  }
+
+  .makeFirst {
+    @media (max-width: $screen-md-min) {
+      order: 1;
+    }
+  }
+
+  .makeSecond {
+    @media (max-width: $screen-md-min) {
+      order: 2;
+    }
+  }
+}
+
+#videoModal .modal-content {
+  @media (min-width: $screen-md-min) {
+    margin-top: 200px;
+  }
+}
+
+.HomepageAB--iconList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.HomepageAB--iconItem {
+  width: calc(50% - 30px);
+
+  @media (max-width: 1367px) {
+    width: 100%;
+    margin-bottom: 0px !important;
+  }
+
+  button {
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    transition: all 250ms ease;
+    font-size: 21px;
+
+    &:hover,
+    &.active {
+      svg {
+        color: white;
+        background-color: $ts-blue;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  svg {
+    border: 2px solid $ts-blue;
+    border-radius: 16px;
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    margin-right: 5px;
+    transition: all 250ms ease;
+
+    @media (max-width: $screen-lg-min) {
+      width: 50px;
+      height: 50px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.HomepageAB--imagePanels {
+  position: relative;
+}
+
+.HomepageAB--imagePanel {
+  display: none;
+  position: static;
+  top: 0;
+  align-items: center;
+  height: 100%;
+
+  @media (min-width: $screen-md-min) {
+    position: absolute;
+  }
+
+  img {
+    max-width: 100%;
+
+    @media (min-width: $screen-md-min) {
+      max-width: 450px;
+    }
+  }
+
+  &.active {
+    display: flex;
+  }
+}
+
+.HomepageAB--imagePanel__left {
+  left: 0;
+
+  @media (min-width: $screen-md-min) {
+    left: -200px;
+  }
+}
+
+.HomepageAB--imagePanel__right {
+  right: 0;
+
+  @media (min-width: $screen-md-min) {
+    right: -200px;
+  }
+}
+
+.HomepageAB--iconPictures {
+  h4 {
+    margin-top: 20px;
+  }
+
+  p {
+    line-height: 1.9rem;
+    font-size: 17px;
+  }
+}
+
+#safariHotfix,
+.safariHotfix {
+  @media (min-width: $screen-md-min) {
+    margin-left: 16%;
+  }
+}
+
+.HomepageAB--stats-container {
+  max-width: 2000px;
+}
+
+.HomepageAB--stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  h4 {
+    font-size: 3.25vw;
+  }
+
+  @media (min-width: 2000px) {
+    h4 {
+      font-size: 56px;
+    }
+  }
+
+  @media (max-width: $screen-md-min) {
+    img {
+      width: 100%;
+    }
+
+    h4 {
+      font-size: 26px;
+    }
+
+    > div {
+      width: 100%;
+    }
+  }
+}
+
+.HomepageAB--slider {
+  .HomepageAB--media-slide {
+    width: 100%;
+
+    h6 {
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.1rem;
+      font-family: $open-sans;
+      margin-bottom: 0px;
+      color: $ts-grey;
+    }
+
+    .Link {
+      border-color: $text-color;
+      color: $text-color;
+    }
+
+    h5 {
+      margin-top: 5px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.List--noBullets {
+  list-style-type: none;
+}
+
+.List--flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.FeatureHero {
+    
+    @media (min-width: $screen-md-min) {
+        padding-bottom: 210px;
+    }
+}
+
+.FeatureHero__cl,
+.FeatureHero__tm {
+    background-image: url('/user/pages/03.leagues-and-clubs/features/features-hero.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.FeatureHero__tm {
+    background-image: url('/user/pages/02.teams/features/hero.png');
+}
+
+.FeatureHero--pull {
+
+    @media (min-width: $screen-md-min) {
+        margin-top: -180px;
+    }
+}

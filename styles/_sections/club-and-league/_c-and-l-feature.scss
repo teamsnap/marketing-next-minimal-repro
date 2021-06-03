@@ -1,0 +1,132 @@
+
+$webinar-img-path: "/user/pages/03.leagues-and-clubs/features/online-registration/";
+
+// Todo move feature things to a feature component?
+
+.FeaturePull {
+
+    @media (min-width: $screen-md-min) {
+        margin-bottom: -200px;
+    }
+}
+
+.feature__bg {
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+// Todo move feature things to a proof component?
+
+.proof__quote {
+    max-width: 700px;
+    margin: 0 auto;
+
+    blockquote {
+        font-size: $mod-font-size-3;
+        font-weight: bold;
+    }
+
+    p {
+        line-height: 2.8rem;
+    }
+}
+
+.proof__quote-mark {
+	display: block;
+	font-size: 150px;
+	line-height: 0px;
+	opacity: .6;
+}
+
+.feature-benefit {
+
+    p {
+        font-size: $mod-font-size-1;
+        line-height: 2.2rem;
+    }
+}
+
+// Registration Section
+.feature__cl-reg-hero {
+    background-color: $cl-light-blue;
+
+    @media (max-width: $screen-sm-min) {
+        padding-top: 0 !important;
+        padding-bottom:0 !important;
+    }
+}
+
+.feature__cl-reg-time-img{
+
+    @media (max-width: $screen-xs-min) {
+        padding-top: 160px;
+    }
+}
+
+.feature__cl-pay-secure-img {
+    margin-top: -150px;
+
+    @media (max-width: $screen-xs-min) {
+        margin-top: 0px;
+    }
+}
+
+.feature__cl-reg-time-text {
+
+    padding-top: 80px;
+
+    @media (min-width: $screen-md-max) {
+        padding-top: 200px;
+    }
+
+}
+
+.feature__cl-reg-fast-img {
+    margin-top: -150px;
+    margin-bottom: -30px;
+
+    @media (max-width: $screen-sm-min) {
+        margin-bottom: -30px;
+    }
+
+    @media (max-width: 1260px) {
+        margin-top: 0;
+    }
+
+    @media (max-width: 1430px) {
+        margin-top: -30px;
+    }
+}
+
+.feature__cl-reg-team-img {
+    picture {
+        margin: 0 auto;
+    }
+
+    img {
+        max-height: 650px;
+
+        @media (max-width: $screen-sm-min) {
+            max-height: 350px;
+        }
+    }
+}
+
+.feature__cl-reg-team-text {
+    @media (min-width: $screen-sm-min) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(50%);
+    }
+}
+
+.feature__cl-reg-payments-img {
+    margin-top: -30px;
+}
+
+.partners {
+    margin: 0 auto;
+}

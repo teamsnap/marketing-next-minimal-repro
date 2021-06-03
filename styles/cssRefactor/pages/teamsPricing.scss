@@ -1,0 +1,504 @@
+.TeamsPricingHero {
+  background-image: url('/images/bg-mobile.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  h1 {
+    margin-top: 50px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    height: 700px;
+    background-image: url('/images/bg.png');
+    background-size: contain;
+
+    h1 {
+      margin-top: 250px;
+    }
+  }
+}
+
+.team-pricing-sub-text {
+  font-size: 0.35em;
+  font-weight: lighter;
+}
+
+.TeamsPricing--gridContainer {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.TeamsPricing--grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.TeamsPricing--content {
+  padding: 30px;
+}
+
+.TeamsPricing--gridBox {
+  width: 100%;
+
+  @media (min-width: $screen-md-min) {
+    flex: 1;
+  }
+}
+
+.TeamsPricing--planCurrency {
+  font-size: 12px;
+  padding: 3px 5px;
+  font-family: $open-sans;
+}
+
+.TeamsPricing--planHighlight {
+  font-size: 11px;
+  padding: 5px 8px;
+  font-family: $open-sans;
+
+  @media (max-width: 1151px) {
+    display: none;
+  }
+}
+
+.TeamsPricing--planLow {
+  font-size: 14px;
+  font-family: $open-sans;
+}
+
+.TeamsPricing--gridSimple {
+  .TeamsPricing--gridBox__highlight {
+    background-color: lighten($ts-green, 43%);
+  }
+}
+
+.TeamsPricing--gridBox {
+  border-top: 8px solid $ts-darkblue;
+
+  @media (min-width: $screen-md-min) {
+    &:first-child {
+      border-top-left-radius: 8px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 8px;
+    }
+  }
+}
+
+.TeamsPricing--gridBox__highlight {
+  border-color: $ts-green;
+}
+
+.TeamsPricing--planFeaturesHeading {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.1rem;
+}
+
+.TeamPricing--planNameWrapper {
+  padding: 30px;
+}
+
+.TeamsPricing--gridBox__highlight {
+  .TeamPricing--planNameWrapper {
+    background-color: lighten($ts-green, 45%);
+  }
+}
+
+.TeamsPricing--gridLargeList {
+  .TeamsPricing--gridLargeItem {
+    padding: 9px 30px;
+    font-size: 15px;
+
+    @media (max-width: 1151px) {
+      padding: 9px 10px;
+      font-size: 13px;
+    }
+
+    &:nth-child(even) {
+      background-color: lighten($ts-blue, 55%) !important;
+    }
+  }
+}
+
+.TeamsPricing--gridLarge {
+  transition: all 200ms ease-in;
+  transform-origin: top center;
+}
+
+.TeamsPricing--gridLarge__isClosed {
+  opacity: 0;
+  height: 0;
+  transform: scale(0) translate3d(0, 0px, 0);
+}
+
+.TeamsPricing--gridLarge__isOpen {
+  opacity: 1;
+  height: auto;
+  transform: scale(1) translate3d(0, 0px, 0);
+}
+
+// Carousel
+
+.TeamsPricing--carouselHeader {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.TeamPricing--carouselWrapper .TeamsPricing--carouselHeader {
+  cursor: pointer;
+}
+
+.TeamsPricing--Toggle {
+  &:before,
+  &:after {
+    font-size: 12px;
+    color: $ts-darkblue;
+    font-weight: bold;
+  }
+
+  &:before {
+    content: 'Annual';
+    padding-right: 8px;
+  }
+
+  &:after {
+    content: 'Monthly';
+    padding-left: 8px;
+  }
+
+  .Toggle-input {
+    &:checked {
+      + .Toggle-label {
+        background-color: $ts-grey;
+        box-shadow: none;
+
+        &:before {
+          content: '';
+        }
+      }
+    }
+  }
+
+  .Toggle-label {
+    background-color: $ts-grey;
+    box-shadow: none;
+
+    &:before {
+      content: '';
+    }
+
+    &:after {
+      background-color: $ts-darkblue;
+    }
+  }
+}
+
+.TeamsPricing--carouselSlide {
+  .TeamsPricing--planFeatures {
+    border-top: 3px solid lighten($ts-blue, 55%);
+
+    li {
+      font-weight: 900;
+      font-size: 18px;
+      color: $ts-darkblue;
+    }
+  }
+
+  #myModalTrigger {
+    cursor: pointer;
+  }
+}
+
+// Comparison grid
+
+.TeamsPricing--valueCompare {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+
+  @media (max-width: $screen-md-min) {
+    margin-bottom: 30px;
+  }
+}
+
+.TeamsPricing--valueCompareHeader {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  @media (max-width: $screen-md-min) {
+    h4 {
+      text-align: center;
+      width: 100%;
+    }
+
+    .TeamsPricing--vs {
+      margin: 0 auto;
+    }
+  }
+
+  h4 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $ts-darkblue;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.TeamsPricing--vs {
+  background-color: $ts-orange;
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+  font-family: $museo-slab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  margin: 0px 20px;
+}
+
+.TeamsPricing--valueCompareItem {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  font-size: 18px;
+  line-height: 2rem;
+  color: $ts-darkblue;
+  align-items: center;
+  border: 2px solid white;
+  border-top-color: transparent;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+
+  @media (min-width: $screen-md-min) {
+    border-top-color: white;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-left-color: transparent;
+  }
+
+  svg {
+    color: $ts-red;
+    opacity: 0.5;
+    font-size: 40px;
+  }
+
+  p {
+    margin-bottom: 0px;
+  }
+
+  &.TeamsPricing--valueCompareHighlight {
+    border: none;
+    border-bottom: 4px solid $ts-orange;
+    border-radius: 0px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+
+    @media (min-width: $screen-md-min) {
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+      border-top-right-radius: 0px;
+      border-right: 4px solid $ts-orange;
+      border-bottom: none;
+    }
+
+    svg {
+      color: $ts-green;
+      opacity: 1;
+    }
+  }
+
+  .Icon {
+    width: 15%;
+  }
+
+  p {
+    width: 80%;
+  }
+
+  @media (min-width: $screen-md-min) {
+    flex: 1;
+  }
+}
+
+.TeamsPricing--planDefinition {
+  padding: 4px 6px;
+}
+
+.TeamsPricing--faqMaxWidth {
+  max-width: 732px;
+  margin: 0 auto;
+}
+
+.TeamsPricing--faqList {
+  dt {
+    font-family: $museo-slab;
+    background-color: lighten($ts-blue, 58%);
+    padding: 10px;
+    border-radius: 12px;
+    color: $ts-darkblue;
+  }
+
+  dd {
+    margin-bottom: 45px;
+  }
+}
+
+.TeamsPricing--quote {
+  strong {
+    font-family: $museo-slab;
+  }
+}
+
+.Wrapper {
+  .TeamPricing--carouselButtons {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    width: 100%;
+
+    button {
+      background: none;
+      border: 2px solid $ts-blue;
+      color: $ts-blue;
+      width: 50px;
+      height: 50px;
+      border-radius: 40px;
+      font-size: 20px;
+      transition: 200ms ease-in;
+
+      &:first-child {
+        margin-right: 30px;
+      }
+
+      &:focus {
+        transform: scale(0.9);
+      }
+    }
+  }
+
+  &:hover {
+    .TeamPricing--carouselButtons {
+      button {
+        color: white;
+        background-color: $ts-blue;
+      }
+    }
+  }
+}
+
+$default-diff: -12px;
+$default-width: 100%;
+$default-min: 5%;
+
+@media (min-width: $screen-md-min) {
+  .Wrapper {
+    position: relative;
+    height: 750px;
+
+    .TeamPricing--carouselButtons {
+      margin-bottom: 0px;
+      position: absolute;
+      z-index: 10;
+      justify-content: space-between;
+      width: 107%;
+      top: 30%;
+      margin: 0px 0px 0px -20px;
+
+      button {
+        &:first-child {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+
+  .TeamPricing--carouselWrapper {
+    width: 510px;
+    position: absolute;
+
+    .carousel .buttons:hover {
+      color: #c01313;
+      background: #fff;
+    }
+
+    .TeamsPricing--carouselSlideTest {
+      width: 510px;
+      transition: all 100ms ease-in-out;
+      position: absolute;
+      list-style: none;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-height: 50px;
+      overflow: hidden;
+
+      &:nth-child(1) {
+        top: ($default-diff * 3.5);
+        width: $default-width - $default-min;
+        animation: scaleCard 100ms;
+        animation-fill-mode: forwards;
+        z-index: 4;
+      }
+
+      &:nth-child(2) {
+        top: ($default-diff);
+        width: $default-width - $default-min * 3;
+        opacity: 0.6;
+        z-index: 3;
+      }
+
+      &:nth-child(3) {
+        top: ($default-diff * 3.2);
+        width: $default-width - $default-min * 4;
+        opacity: 0.4;
+        z-index: 1;
+      }
+    }
+  }
+
+  @keyframes scaleCard {
+    0% {
+      top: 5px;
+      max-height: 50px;
+      overflow: hidden;
+    }
+
+    100% {
+      top: 24px;
+      opacity: 1;
+      z-index: 4;
+      max-height: 800px;
+      overflow: visible;
+    }
+  }
+
+  @keyframes bounceInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(40px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes bounceInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

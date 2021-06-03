@@ -1,0 +1,90 @@
+.why--hero {
+  background-image: url('/user/pages/10.why/hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-width: $screen-md-min) {
+    min-height: 700px;
+    background-position-y: -100px;
+  }
+}
+
+.why--heroContent {
+  margin: 0 auto;
+
+  @media (min-width: $screen-md-min) {
+    max-width: 50%;
+    margin-top: 15%;
+  }
+}
+
+.why--list {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    margin-right: 30px;
+    font-weight: bold;
+
+    @media (min-width: $screen-md-min) {
+      width: calc(33.33% - 30px);
+    }
+  }
+}
+
+.why--reviewPush {
+  @media (min-width: $screen-md-min) {
+    margin-top: 50px;
+  }
+}
+
+.why--reviewNumber {
+  color: $ts-orange;
+  font-size: $mod-font-size-8;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  position: relative;
+
+  @media (min-width: $screen-md-min) {
+    &:after {
+      content: '';
+      display: block;
+      width: 75%;
+      background-color: $ts-orange;
+      height: 4px;
+      position: absolute;
+      right: -63px;
+      top: 25px;
+      z-index: 100;
+    }
+  }
+
+  @media (max-width: $screen-md-min) {
+    text-align: center;
+  }
+}
+
+.why--reviewLabel {
+  margin-top: 0px;
+  color: $ts-grey;
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+  font-size: 21px;
+
+  @media (max-width: $screen-md-min) {
+    text-align: center;
+  }
+}
+
+.why--center {
+  @media (max-width: $screen-md-min) {
+    text-align: center;
+  }
+}
+
+.why--imageCenter {
+   @media (max-width: $screen-md-min) {
+     display: block;
+    margin: 0 auto;
+  }
+}

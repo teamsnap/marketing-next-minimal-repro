@@ -1,0 +1,320 @@
+.partner-lp {
+
+    .section-pad {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .flex--row {
+		display: flex;
+		flex-wrap: wrap;
+
+		.col-md-6 {
+
+            &:first-child {
+                order: 2;
+            }
+
+            &:last-child {
+            	order: 1;
+            }
+
+		}
+	}
+
+    .partner-lp-logos {
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 600px;
+            padding-top: 7%;
+            padding-bottom: 7%;
+
+            &.max-width {
+                width: 300px;
+            }
+        }
+    }
+
+    .tlc-lp-logo {
+        max-width: 200px;
+    }
+
+    .partner-lp-name {
+        font-size: $mod-font-size-5;
+        letter-spacing: -.01em;
+
+        &.quakes-contest-name {
+            color: $brand-orange-dark;
+        }
+    }
+
+    .partner-lp-name {
+        color: $brand-primary-dark;
+    }
+
+    .partner-lp-hero {
+        background-image: url('#{$img-path}bg.jpg');
+
+
+        &.quakes-hero {
+            background-image: url('#{$img-path}Bkgd_01.jpg');
+        }
+
+        &.tlc-hero {
+            background-image: url('#{$img-path}bg-tlc-lp.jpg');
+        }
+    }
+
+    .partner-lp-hero {
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        p {
+            font-family: $museo-700;
+            color: $brand-primary-dark;
+        }
+
+        .partner-lp-image {
+            margin-top: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .partner-lp-form-hero {
+
+            img {
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+        }
+    }
+
+    .partner-lp-form {
+        background-color: white;
+        margin-top: 30px;
+        border-radius: 10px;
+        border: 1px solid $gray-lighter;
+        margin-bottom: 10%;
+
+        #partner-lp-form-post {
+            padding: 30px;
+        }
+
+        .control-label {
+            margin-bottom: 20px;
+            font-size: $mod-font-size-base;
+            color: $brand-primary;
+            display: inline-block;
+            margin-bottom: 5px;
+            font-family: $museo-700;
+        }
+
+        .form-control {
+            margin-bottom: 30px;
+        }
+
+        .partner-lp-heading-divider {
+            font-family: $museo-700;
+            font-weight: bold;
+            color: gray;
+            margin: 30px 0px;
+
+            &:before,
+            &:after {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                width: 20%;
+                border-bottom: 2px solid $gray-light;
+            }
+
+            &:before {
+                margin-right: 10px;
+            }
+
+            &:after {
+                margin-left: 10px;
+            }
+        }
+
+        [data-bv-validator="notEmpty"],
+        [data-bv-validator="regexp"] {
+            color: $brand-danger;
+        }
+
+        .partner-lp-disclaimer {
+            font-size: $mod-font-size--1;
+            color: $gray-light;
+            font-family: $museo-300;
+        }
+
+        .partner-lp-submit {
+            font-family: $museo-700;
+        }
+
+        .partner-lp-form-disclaimer {
+            font-size: $mod-font-size--1;
+            color: $gray-light;
+            font-family: $museo-300;
+        }
+
+    }
+
+    .partner-lp-cta {
+
+        h4 {
+            color: black;
+            font-size: $mod-font-size-4;
+        }
+
+        p {
+            font-family: $museo-300;
+            font-size: $mod-font-size-1;
+        }
+    }
+
+    .partner-lp-footer {
+        background-color: #FAFAFC;
+        color: $gray;
+
+        .brought-to-text {
+            font-family: $museo-700;
+            text-transform: uppercase;
+            font-size: $mod-font-size--1;
+            letter-spacing: .1em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        address {
+            margin-top: 10px;
+        }
+
+        h5 {
+            font-family: $museo-700;
+            font-weight: bold;
+            color: $brand-primary;
+        }
+
+        ul {
+
+            li {
+                padding-left: 0 !important;
+
+                a {
+                    color: $gray;
+                    transition: color 300ms ease;
+                    text-decoration: none;
+                    font-size: $mod-font-size--1;
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: darken($gray, 20%);
+                        text-decoration: underline !important;
+                    }
+                }
+
+                &:before {
+                    display: none;
+                }
+            }
+        }
+
+        .social {
+
+            li {
+
+                a {
+                    color: $brand-primary;
+                    background-color: white;
+                    height: 25px;
+                    width: 25px;
+                    text-align: center;
+                    display: block;
+                    border-radius: 3px;
+                    transition: background-color .25s ease-in-out;
+                    font-size: $mod-font-size-base;
+
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: darken($brand-primary, 20%) !important;
+                        background-color: darken(white, 10%);
+                    }
+                }
+            }
+        }
+
+        .what-is-desc {
+            color: $brand-primary-dark;
+            padding-right: 20px;
+        }
+    }
+}
+
+@media (max-width: $screen-tablet) {
+
+    .partner-lp {
+
+        .partner-lp-max-width {
+            max-width: 100%;
+        }
+
+        .section-pad {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+@media (max-width: $screen-phone) {
+
+    .partner-lp {
+
+        .section-pad {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .partner-lp-hero {
+
+            .partner-lp-form {
+
+                .partner-lp-heading-divider {
+
+                    &:before,
+                    &:after {
+                        width: 15%;
+                    }
+
+                    &:before {
+                        margin-right: 10px;
+                    }
+
+                    &:after {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive(screen-md) {
+
+    .partner-lp {
+
+    	.flex--row {
+    		display: block;
+    	}
+
+        .partner-lp-name {
+            font-size: $mod-font-size-9;
+        }
+    }
+}

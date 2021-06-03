@@ -1,0 +1,15 @@
+@mixin responsive-text($font-size) {
+    // mobile first size, decrease inputted variable by modular scale, factor of 1.125
+    font-size: ($font-size * 0.625);
+    font-family: $museo-700;
+
+    @include responsive(screen-sm) {
+        // tablet size, decrease inputted variable by modular scale, factor of 1.125
+		font-size: ($font-size * 0.875);
+	}
+
+	@include responsive(screen-md) {
+        // desktop size, size of inputted variable
+		font-size: $font-size;
+	}
+}

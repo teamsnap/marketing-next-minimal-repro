@@ -1,0 +1,22 @@
+module.exports = {
+  siteUrl: 'https://www.teamsnap.com',
+  exclude: [
+    '/leagues-and-clubs-resource-library/why-teamsnap-for-sports-organizations-4',
+    '/card/thank-you',
+    '/url-builder',
+    '/leagues-and-clubs-resource-library/what-should-people-know-about-teamsnap',
+    '/leagues-and-clubs-resource-library/why-teamsnap-for-sports-organizations-1',
+    '/leagues-and-clubs-resource-library/what-makes-teamsnap-different',
+    '/leagues-and-clubs-resource-library/why-teamsnap-for-sports-organizations-3',
+    '/leagues-and-clubs-resource-library/our-customer-success-team',
+    '/leagues-and-clubs-resource-library/meet-greg-ludke-1',
+    '/leagues-and-clubs-resource-library/meet-greg-ludke-2',
+    '/leagues-and-clubs-resource-library/inside-teamsnap-for-sports-organizations',
+    '/leagues-and-clubs-resource-library/how-do-we-live-up-to-our-mission',
+    '/tradeshow',
+    '/teamlink-thank-you',
+    '/unsubscribe',
+    '/do-not-sell-my-information',
+    '/leagues-and-clubs/signup',
+  ],
+};

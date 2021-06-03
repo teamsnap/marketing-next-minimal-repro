@@ -1,0 +1,19 @@
+.Link {
+  color: $ts-blue;
+  padding-bottom: 4px;
+  border-bottom: 1px solid $ts-blue;
+  transition: 150ms ease-in;
+}
+
+.Link--uppercase {
+  font-family: $museo-slab;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: $mod-font-size--2;
+}
+
+.Link--white {
+  color: white;
+  border-color: white;
+}

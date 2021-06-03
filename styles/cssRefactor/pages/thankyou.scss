@@ -1,0 +1,12 @@
+.ThankYou {
+    
+    @media (min-width: $screen-md-min) {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .CTA__form-panel {
+        width: 360px;
+    }
+}

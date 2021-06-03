@@ -1,0 +1,77 @@
+// Background colors
+
+.bg--white {
+  background-color: $ts-white;
+}
+
+.bg--blue {
+  background-color: $ts-blue;
+}
+
+.bg--light-blue {
+  background-color: lighten($ts-blue, 55%);
+}
+
+.bg--light-green {
+  background-color: lighten($ts-green, 45%);
+}
+
+.bg--dark-blue {
+  background-color: $ts-darkblue;
+}
+
+.bg--light-grey {
+  background-color: lighten($ts-grey, 12%);
+}
+
+.bg--dark-grey {
+  background-color: #2b2b2b;
+}
+
+.bg--orange {
+  background-color: $ts-orange;
+}
+
+.bg--green {
+  background-color: $ts-green;
+}
+
+.bg--light-orange {
+  background-color: lighten($ts-orange, 40%);
+}
+
+.bg--shadow {
+  box-shadow: 0 10px 16px 0 rgba(78, 109, 132, 0.12);
+}
+
+.bg--gradient__orange {
+  background-image: linear-gradient(
+    -25deg,
+    #ff9944 0%,
+    #f96a12 67%,
+    #f75b02 100%
+  );
+}
+
+.bg--form-hack {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.bg--shadow {
+  box-shadow: 0 10px 16px 0 rgba(78, 109, 132, 0.12);
+}
+
+// Background images
+.bg--hero {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.bg--overflow-hidden {
+  overflow: hidden;
+}

@@ -1,0 +1,157 @@
+/* Footer */
+
+#Footer {
+	padding: 20px 0 0 0;
+
+	.logo {
+		max-width: 200px;
+    }
+
+	ul {
+		padding-bottom: 0;
+		padding-left: 0;
+	}
+
+	li {
+		font-size: $mod-font-size--3;
+		list-style-type: none;
+		padding-bottom: 0;
+
+		a {
+			color: $brand-footer-item;
+
+			&:hover,
+	        &:focus,
+	        &:active {
+				color: #fff;
+				text-decoration: underline !important;
+			}
+		}
+
+	}
+
+	.social {
+		max-width: 165px;
+
+		li {
+			float: left;
+			display: block;
+			padding: 0 0 5px 5px;
+			padding-left: 5px !important;
+
+			a {
+				text-align: center;
+				display: block;
+				height: $standard-component-height;
+				width: $standard-component-height;
+				line-height: $standard-component-height;
+				font-size: $font-size-small;
+				color: $brand-primary;
+				background: $brand-footer-item;
+				border-radius: 3px;
+				transition: background-color .25s ease-in-out;
+
+				span {
+					color: inherit;
+				}
+
+				&:hover,
+				&:active,
+				&:focus {
+					background: #fff;
+				}
+
+                svg {
+					fill: $brand-primary;
+                }
+			}
+		}
+	}
+
+	.col-custom {
+		width: 100%;
+		padding: 15px;
+		float: none;
+		clear: both;
+	}
+
+	.bg-primary-dark {
+		margin-top: 40px;
+
+		p {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding: 0 $grid-padding-width;
+			line-height: $standard-component-height;
+			font-size: $font-size-small;
+			color: $brand-footer-item;
+		}
+	}
+
+    .copy-right {
+        padding: 10px 0px;
+    }
+
+	.copyright-link {
+		text-decoration: underline;
+		color: lighten($link-color, 25%);
+	}
+}
+
+@include responsive(screen-sm) {
+
+	#Footer {
+
+		.col-custom {
+
+			&.sm {
+				float: left;
+				width: 23%; /* 165 / 1170 */
+				padding-top: 30px;
+				clear: none;
+			}
+		}
+	}
+
+}
+
+@include responsive(screen-md) {
+
+	#Footer {
+		.col-custom {
+			padding: 0;
+
+			&.md {
+				float: left;
+				width: 25%; /* 255 / 1170 */
+				clear: none;
+
+				&:first-child {
+					padding-top: 0;
+				}
+
+				&:last-child {
+					padding-top: 30px;
+				}
+			}
+
+			&.sm {
+				width: 16.25%; /* 165 / 1170 */
+			}
+
+			// &:nth-child(2) {
+			// 	width: 14%;
+			// }
+			//
+			// &:nth-child(3) {
+			// 	width: 18%;
+			// }
+			//
+			// &:nth-child(4) {
+			// 	width: 14%;
+			// }
+		}
+
+	}
+
+}

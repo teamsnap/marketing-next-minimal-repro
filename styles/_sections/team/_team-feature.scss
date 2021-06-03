@@ -1,0 +1,31 @@
+// TODO: Refactor with new CSS to not be redunant
+
+.tm__feature-hero {
+  h2 {
+    line-height: 2.8rem;
+  }
+}
+
+.tm__feature-benefit,
+.tm__cta {
+  p {
+    font-size: $mod-font-size-1;
+    line-height: 2.2rem;
+  }
+}
+
+.tm__feature-proof {
+  .tm__quote {
+    max-width: 700px;
+    margin: 0 auto;
+
+    blockquote {
+      font-size: $mod-font-size-3;
+      font-weight: bold;
+    }
+
+    p {
+      line-height: 2.8rem;
+    }
+  }
+}

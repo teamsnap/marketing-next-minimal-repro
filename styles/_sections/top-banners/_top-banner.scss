@@ -1,0 +1,197 @@
+.top-banner__margin {
+  margin-top: 182px;
+
+  &.Navigation--transparent {
+    margin-top: 120px;
+  }
+}
+
+.top-banner {
+  position: relative;
+  margin-top: -20px;
+  margin-bottom: 20px;
+
+  .top-banner__content {
+    a {
+      color: white;
+      transition: all 150ms ease;
+
+      &:hover {
+        color: rgba(255,255,255,0.8);
+      }
+    }
+  }
+
+  &#covid {
+    .top-banner__content {
+      line-height: 1.5rem;
+      span {
+        font-family: $open-sans;
+      }
+    }
+  }
+
+  .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    height: 120px;
+    opacity: 1;
+    padding: 10px;
+    transition: all 400ms ease-in;
+
+    .flex-item {
+      &:first-child {
+        margin-right: 16px;
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &.closed {
+    .flex-row {
+      height: 0;
+      opacity: 0;
+      padding: 0px;
+    }
+  }
+
+  &.top-banner__resource {
+    background-color: $ts-darkblue;
+  }
+
+  &.top-banner__healthcheck {
+    background: linear-gradient(60deg, #00b113, #7fc243, #00bf8e, #00b113);
+    background-size: 600% 600%;
+    animation: HealthCheckGradient 13s ease infinite;
+  }
+
+  &.top-banner__womenDay {
+    background-color: $ts-darkblue;
+    
+    .top-banner__content {
+      padding-right: 0px;
+      font-family: $museo-slab;
+
+      @media (min-width: $screen-md-min) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .top-banner__logo {
+    padding: 8px;
+    max-width: 62px;
+  }
+
+  .top-banner__content {
+    padding-top: 6px;
+    padding-right: 12%;
+    font-size: $mod-font-size--2;
+    line-height: 1.5;
+    color: white;
+    font-family: $open-sans;
+
+    span {
+      font-family: $museo-slab;
+    }
+  }
+
+  .top-banner__cta {
+    margin-left: 0px;
+  }
+
+  .top-banner__close {
+    cursor: pointer;
+    display: block;
+    width: 12px;
+    height: 12px;
+    color: white;
+    font-size: 15px;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7%;
+  }
+}
+
+.navbar.navbar-default.lift {
+  .top-banner {
+    .flex-row {
+      opacity: 0;
+      height: 0;
+      padding: 0px;
+    }
+  }
+}
+
+@include responsive(screen-xs) {
+  .top-banner__margin {
+    margin-top: 152px;
+
+    &.Navigation--transparent {
+      margin-top: 120px;
+    }
+  }
+
+  .top-banner {
+    .flex-row {
+      height: 120px;
+      justify-content: flex-start;
+      padding: 10px;
+    }
+
+    .top-banner__content {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@include responsive(screen-md) {
+  .top-banner__margin {
+    margin-top: 163px;
+
+    &.Navigation--transparent {
+      margin-top: 100px;
+    }
+  }
+
+  .top-banner {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    &#covid {
+      .flex-item:first-child {
+        width: 60%;
+      }
+
+      .top-banner__content {
+        font-size: 16px;
+        font-family: $museo-slab;
+
+        span {
+          font-family: $open-sans;
+        }
+      }
+    }
+
+    .flex-row {
+      height: 100px;
+      justify-content: center;
+    }
+
+    .top-banner__content {
+      font-size: $mod-font-size--1;
+    }
+
+    .top-banner__cta {
+      margin-left: 10px;
+    }
+  }
+}

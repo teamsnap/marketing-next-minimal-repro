@@ -1,0 +1,88 @@
+.exit-modal {
+  .modal-dialog {
+    margin-top: 10%;
+    width: calc(100% - 20px);
+
+    @media (min-width: $screen-md-min) {
+      width: 800px;
+    }
+  }
+
+  .modal-header,
+  .modal-footer {
+    border: none;
+    text-align: left;
+  }
+
+  .modal-body {
+    padding: 15px 30px;
+  }
+
+  .modal-footer {
+    padding: 0px 30px 30px 30px;
+  }
+
+  .close {
+    color: darken($brand-primary-dark, 20%);
+    opacity: 0.5;
+  }
+
+  .exit--quoteWrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .exit--quote {
+    position: relative;
+    color: $ts-darkblue;
+    font-size: 15px;
+
+    &:after {
+      top: 35px;
+      left: -7px;
+      position: absolute;
+      content: '';
+      display: block;
+      height: 80%;
+      width: 4px;
+      background-color: $ts-darkblue;
+    }
+
+    cite {
+      display: flex;
+      align-items: center;
+      color: $ts-darkblue;
+      font-size: 15px;
+
+      strong {
+        font-family: $museo-slab;
+      }
+    }
+
+    img {
+      margin-right: 15px;
+    }
+  }
+
+  .modal-header {
+    background-image: url('#{$img-path}/exit-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: $border-radius-large;
+    border-top-right-radius: $border-radius-large;
+    height: 200px;
+
+    &.modal-header--return {
+      background-position: center 40%;
+      height: 250px;
+      background-image: url('/user/pages/13.resources/return-to-sports/return-to-sports.gif');
+    }
+  }
+
+  .exit-modal--link {
+    color: $brand-primary-dark;
+    font-size: $mod-font-size-base;
+  }
+}

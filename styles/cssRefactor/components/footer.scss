@@ -1,0 +1,72 @@
+.Footer {
+  hr {
+    border-color: #072644;
+  }
+
+  h5 {
+    color: #9bb0c4;
+    font-size: $mod-font-size-3;
+  }
+
+  li {
+    padding-bottom: 4px;
+  }
+
+  h6 {
+    color: white;
+
+    a {
+      color: white;
+
+      &:hover {
+        color: darken(white, 20%);
+      }
+    }
+  }
+
+  p,
+  li {
+    color: #9bb0c4;
+  }
+
+  a {
+    color: #9bb0c4;
+    border-color: #9bb0c4;
+    transition: 150ms ease-in;
+
+    &:hover {
+      color: darken(#9bb0c4, 20%);
+    }
+
+    &.Footer--socialItem {
+      font-size: 26px;
+      color: white;
+    }
+  }
+}
+
+.Footer--logo svg {
+  max-width: 200px;
+
+  .LogoText {
+    fill: white;
+  }
+}
+
+.Footer--row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Footer--col {
+  @media (max-width: $screen-md-min) {
+    width: 100%;
+  }
+}
+
+.Footer--appLogos {
+  img {
+    height: 35px;
+  }
+}

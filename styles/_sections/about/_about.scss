@@ -1,0 +1,150 @@
+.bio-titles {
+  font-size: 14px !important;
+  display: block;
+  margin-top: 6px;
+  font-weight: normal;
+  font-family: $open-sans;
+}
+
+.block-right {
+  background: white;
+  padding: 90px 60px;
+  display: table-cell;
+  box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.32);
+  margin: 60px -100px;
+  width: 670px;
+
+  @media (max-width: $screen-md-min) {
+    width: 100%;
+    padding: 30px 45px;
+  }
+}
+
+.block-left {
+  margin: 20px 0px !important;
+}
+
+.photo {
+  width: 710px;
+  margin-left: -45px;
+  z-index: -1;
+
+  @media (max-width: $screen-md-min) {
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.bg-about-us {
+  min-height: 550px;
+  padding: 110px 0;
+}
+
+.bg-brand-partners {
+  background-image: url('/user/pages/06.about/brand-partners.png');
+  background-attachment: fixed;
+
+  @media (min-width: $screen-md-min) {
+    padding: 180px !important;
+  }
+}
+
+.xtra-padding {
+  padding: 80px 0 !important;
+}
+
+.-grid .-grid--block:hover,
+.-grid .-grid--block:active,
+.-grid .-grid--block:focus {
+  background-color: white !important;
+}
+.p-24 {
+  font-size: 1.35em !important;
+}
+
+#About {
+  .hero {
+    background-image: url('#{$img-path}group-pic.jpg');
+  }
+
+  .col-md-5 h2 {
+    margin-top: 20px;
+  }
+
+  .col-md-6 h2 {
+    margin-top: 35px;
+  }
+}
+
+.news {
+  border-top: 2px solid $gray-lighter;
+  padding-bottom: 50px;
+
+  > h2 {
+    padding-top: 40px;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  + p + ul {
+    padding-bottom: 15px;
+    padding-left: 5px;
+  }
+}
+
+@include responsive(screen-md) {
+  #About {
+    .col-md-6 h2 {
+      margin-top: 20px;
+    }
+  }
+}
+
+// Partners styling, taken from inline prob needs to be refactored
+
+.partner-form {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #ebebeb;
+  border-radius: 8px;
+}
+
+textarea {
+  height: 200px;
+  padding: 20px;
+}
+
+#first_name + .form-control-feedback {
+  top: 10px;
+}
+
+.careers {
+  .Careers--hero {
+    background-image: url('/user/pages/06.about/brand-partners.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .Careers--row {
+    @media (min-width: $screen-md-min) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .col-md-6 {
+        width: calc(50% - 1px);
+      }
+    }
+  }
+
+  .well {
+    &.white {
+      background: white;
+    }
+  }
+}

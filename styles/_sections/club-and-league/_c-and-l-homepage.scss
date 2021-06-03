@@ -1,0 +1,540 @@
+$cl-light-blue: #eef7ff;
+$cl-dark-blue: #549ce7;
+
+// TODO: Make generic with CSS refactor
+// team uses the typography too
+
+.cl {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:not(.text--default) {
+      font-family: $proxima-nova;
+    }
+  }
+
+  hr {
+    max-width: 250px;
+    border-color: $cl-light-blue;
+    border-width: 3px;
+
+    &.light {
+      border-color: $cl-dark-blue;
+      opacity: 0.25;
+    }
+  }
+
+  .bg--light-blue {
+    background-color: $cl-light-blue;
+  }
+
+  .bg--white {
+    background-color: white;
+  }
+
+  .bg--shadow {
+    box-shadow: 0 10px 16px 0 rgba(78, 109, 132, 0.12);
+  }
+
+  .bg--round {
+    border-radius: 30px;
+  }
+
+  .text--link {
+    color: $gray;
+    border-bottom: 2px solid $ts-blue;
+  }
+
+  .text--uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+.cl__walkthrough {
+  // need to reset from other CSS
+  .nav > li > a:focus {
+    background-color: transparent;
+  }
+
+  .nav-tabs {
+    border-bottom: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    li {
+      font-size: 18px;
+
+      &:last-child {
+        .cl__walkthrough-tab:after {
+          display: none;
+        }
+      }
+    }
+
+    > li {
+      float: none;
+      margin-bottom: 0;
+
+      > a {
+        text-align: center;
+        border: none;
+        color: $gray;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+        transition: all 150ms ease-in;
+
+        span {
+          color: $ts-blue;
+        }
+
+        &:focus,
+        &:hover {
+          background-color: transparent;
+          border: none;
+          color: $ts-blue;
+          transform: scale3d(1.1, 1.1, 1.1);
+        }
+      }
+
+      &.active > a {
+        color: $ts-blue;
+
+        .cl__walkthrough-tab {
+          color: white;
+          background-color: $ts-blue;
+          border: 5px solid $ts-blue;
+        }
+
+        #phoneFill {
+          fill: white;
+        }
+
+        &,
+        &:focus,
+        &:hover {
+          background-color: transparent;
+          border: none;
+        }
+      }
+
+      &.active {
+        &:after {
+          content: '';
+          background-color: white;
+          border-left: 2px solid #f2f2f2;
+          border-top: 2px solid #f2f2f2;
+          display: block;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        &.active {
+          &:after {
+            position: relative;
+            transform: rotate(45deg);
+            bottom: -19px;
+            left: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  .cl__walkthrough-tab {
+    width: 116px;
+    height: 116px;
+    border-radius: 200px;
+    display: block;
+    border: 1px solid $ts-blue;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 50ms ease-in;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      border: 3px solid $ts-blue;
+    }
+
+    > .Icon {
+      pointer-events: none;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      background-image: url('/images/chevron.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      font-size: 18px;
+      color: $gray;
+      position: absolute;
+      right: -40px;
+    }
+  }
+
+  .tab-content {
+    padding: 30px;
+    border-radius: 30px;
+    min-height: 400px;
+    border: 1px solid $gray-lighter;
+
+    ul {
+      font-size: $mod-font-size-1;
+      list-style-type: none;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  &.cl__walkthrough--large {
+    .nav-tabs > li > a {
+      font-size: 16px;
+    }
+
+    .nav-tabs > li {
+      flex-basis: 12.5%;
+    }
+
+    .cl__walkthrough-tab {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.cl__nums {
+  padding-bottom: 80px;
+
+  .cl__num {
+    padding-top: 10px;
+    border-radius: 8px;
+
+    .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    &.cl__num--margin {
+      margin-top: 80px;
+    }
+  }
+
+  .cl__num-text {
+    color: $ts-blue;
+    text-align: center;
+    z-index: 1;
+    padding: 20px 0;
+
+    > span {
+      display: block;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  .cl__num-image {
+    margin: -80px auto 0;
+    display: block;
+  }
+
+  .cl__num-text--lg {
+    margin-top: -80px;
+
+    > span {
+      font-size: $mod-font-size-13;
+    }
+  }
+}
+
+.cl__proof {
+  padding-bottom: 260px;
+  padding-top: 50px;
+
+  .cl__num-text {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    max-width: 290px;
+    margin-right: 50px;
+
+    > span {
+      font-size: 3.5em;
+      display: block;
+      padding-right: 30px;
+      font-family: $proxima-nova;
+      margin-top: -18px;
+    }
+
+    img {
+      display: block;
+      width: 130px;
+      max-width: none;
+      margin-right: 30px;
+    }
+  }
+}
+
+//Todo if we are going to use this in multiple places we should put into object probably
+.cl__quotes {
+  position: relative;
+  top: -210px;
+  margin-bottom: -160px;
+
+  @media (min-width: $screen-md-min) {
+    position: relative;
+    top: -190px;
+    margin-bottom: -150px;
+  }
+}
+
+.cl__quote {
+  border-radius: 30px;
+  min-height: 310px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+
+  &.cl__quote--less-height {
+    min-height: 220px;
+  }
+
+  blockquote {
+    font-size: 16px;
+    margin: auto 0;
+    padding: 30px;
+  }
+}
+
+.cl__quote-mark {
+  display: block;
+  font-size: 150px;
+  line-height: 0px;
+  opacity: 0.6;
+}
+
+.cl__quote-cite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+
+  img {
+    max-width: 75px;
+    margin-right: 20px;
+  }
+}
+
+.cl__quote-image--width {
+  width: 35%;
+}
+
+.cl__pricing {
+  background-image: url('/user/pages/03.leagues-and-clubs/pricing-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.cl__pricing-process-list {
+  list-style-type: none;
+  padding-bottom: 5px;
+}
+
+.cl__pricing-process-list-item {
+  margin-bottom: 40px;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  background-color: darken($cl-dark-blue, 10%);
+  font-weight: bold;
+  font-size: $mod-font-size-1;
+  letter-spacing: 0.02em;
+
+  &:nth-child(2) {
+    background-color: $cl-dark-blue;
+  }
+
+  &:last-child {
+    background-color: lighten($cl-dark-blue, 8%);
+  }
+}
+
+.cl__faq {
+  dt {
+    color: $ts-darkblue;
+    font-size: $mod-font-size-1;
+    font-family: $proxima-nova;
+    margin-bottom: 8px;
+  }
+
+  dd {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: $ts-darkblue;
+    padding: 10px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.cl__img-text-block {
+  .cl__img-container {
+    overflow: hidden;
+  }
+
+  img {
+    display: block;
+    max-width: none;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .cl__quote--width {
+    margin: 0 auto;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: $screen-md-min) {
+  .cl__walkthrough {
+    margin-top: 0;
+
+    .tab-content {
+      padding: 20px;
+      margin-left: 110px;
+
+      h4 {
+        margin-left: 0;
+      }
+
+      ul {
+        font-size: $mod-font-size--1;
+      }
+
+      li {
+        background-image: none;
+        padding-left: 0;
+      }
+
+      .Button {
+        margin-bottom: 20px;
+      }
+    }
+
+    .nav-tabs {
+      flex-wrap: wrap;
+      position: absolute;
+      max-width: 110px;
+      left: 5px;
+
+      > li {
+        padding-bottom: 0px;
+
+        > a {
+          font-size: 12px;
+          text-align: left;
+          padding-bottom: 6px;
+        }
+      }
+    }
+
+    .cl__walkthrough-tab {
+      width: 36px;
+      height: 36px;
+      text-align: center;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &.cl__walkthrough--large {
+      .nav-tabs > li > a {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .cl__proof {
+    max-height: 100%;
+    margin-bottom: 0;
+  }
+
+  .cl__nums {
+    margin-top: 10%;
+  }
+
+  .cl__quote {
+    .col-xs-7 {
+      width: 58.33333%;
+      float: left;
+    }
+
+    .col-xs-5 {
+      width: 41.66667%;
+      float: left;
+    }
+  }
+
+  .cl__tourn-cross {
+    .Button {
+      margin-bottom: 30px;
+    }
+  }
+
+  .cl__img-text-block {
+    img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    a,
+    h5,
+    p {
+      margin: 0 20px;
+    }
+
+    a {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// this is overriding the teamSnap UI buttons
+
+@media only screen and (max-width: 1465px) {
+  .Button--outline.Button--light {
+    color: $ts-blue;
+    border-color: $ts-blue;
+
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: darken($ts-blue, 5%);
+    }
+  }
+}
+
+// TODO:
