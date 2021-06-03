@@ -14,7 +14,7 @@ const expectedCacheTags = ['all', 'tags', 'categories', 'posts', 'authors', 'hyb
 const nextCacheFolder = `${baseFolder}/next-blog`;
 
 // Load form env, if nothing return empty array
-const cacheTags = process?.env?.CLEAR_BLOG_CACHE.split(',') || [];
+const cacheTags = ['hybrid'] || [];
 
 // Helper functions
 const fileExists = async (path) => !!(await fs.stat(path).catch((e) => false));

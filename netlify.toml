@@ -25,48 +25,12 @@
 # Redirects
 # ---
 # Page level and vanity redirects are housed in public/_redirects
-
-# Redirect netlify domain to custom domain
-# [[redirects]]
-#   from = "https://ts-marketing.netlify.app/*"
-#   to = "https://www.teamsnap.com/:splat"
-#   force = true
-#   status = 301
-
-# Redirect all of the blog to the new path
-[[redirects]]
-  from = "https://blog.teamsnap.com/*"
-  to = "https://www.teamsnap.com/blog/:splat"
-  force = true
-  status = 301
-
-# Redirect blog asset requests to the headless admin domain
-# this is needed to preserve assets used outside of the blog
-# using 200 to mask the request
-[[redirects]]
-  from = "/blog/wp-content/*"
-  to = "https://tsblogadmin.teamsnap.com/wp-content/:splat"
-  status = 200
+# REMOVED MOST REDIRECTS
 
 # Redirect blog feed requests to the headless admin domain
 # this is needed to preserve the RSS feed
 # using 200 to mask the request
 [[redirects]]
   from = "/blog/feed"
-  to = "https://tsblogadmin.teamsnap.com/feed"
+  to = "/api/blog/feed"
   status = 200
-
-# Redirect all of the developer docs to the new path
-[[redirects]]
-  from = "https://developer.teamsnap.com/*"
-  to = "https://www.teamsnap.com/documentation/:splat"
-  force = true
-  status = 301
-
-
-# General redirects that have higher importance
-[[redirects]]
-  from = "/teamlink-thank-you"
-  to = "/teamlink-thank-you-2"
-  force = true
-  status = 302
